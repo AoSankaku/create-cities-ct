@@ -1,5 +1,6 @@
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.ingredient.IIngredient;
+import crafttweaker.api.recipe.replacement.Replacer;
 
 // Glowstone Dust ←→ Prismarine Crystal
 <tag:items:c:glowstone_dusts>.add(<item:minecraft:prismarine_crystals>);
@@ -7,6 +8,9 @@ import crafttweaker.api.ingredient.IIngredient;
 // Glowstone ←→ Sea Lantern(タグ作成)
 <tag:items:c:bright_blocks>.add(<item:minecraft:sea_lantern>);
 <tag:items:c:bright_blocks>.add(<item:minecraft:glowstone>);
+
+// 
+<tag:items:forge:dyes/yellow>.add(<item:thermal:sulfur_dust>);
 
 // Handy Crash
 craftingTable.addShapeless(
@@ -112,3 +116,12 @@ craftingTable.remove(<item:brewery:potato_salad>);
 craftingTable.addShapeless("true_potato_salad", <item:brewery:potato_salad> * 2,[
   <tag:items:forge:pasta>, <item:minecraft:carrot>, <item:farmersdelight:onion>, <item:farmersdelight:onion>, <item:moredelight:diced_potatoes>, <item:moredelight:diced_potatoes>, <item:minecraft:bowl>
 ]);
+
+// Replacement for recipes using yellow dye
+Replacer.create()
+  .replace<IIngredient>(
+    <recipecomponent:crafttweaker:input/ingredients>,
+    <item:minecraft:yellow_dye>,
+    <tag:items:forge:dyes/yellow>.asIIngredient()
+  )
+  .execute();
