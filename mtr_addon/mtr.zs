@@ -69,6 +69,40 @@ craftingTable.addShapeless("logo_lu", <item:londonunderground:tfl_block>, [
   CommonLootModifiers.add(<item:londonunderground:platform_variant>)
 );
 
+// Recipes for lu platforms
+
+craftingTable.addShapeless("lu_1", <item:londonunderground:platform_tfl_1>, [
+  <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
+  <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
+  <tag:items:forge:dyes/white>, <tag:items:forge:dyes/yellow>, <tag:items:forge:dyes/gray>, 
+]);
+
+craftingTable.addShapeless("lu_2", <item:londonunderground:platform_tfl_island>, [
+  <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
+  <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
+  <tag:items:forge:dyes/white>, <tag:items:forge:dyes/yellow>, <tag:items:forge:dyes/gray>, 
+]);
+
+craftingTable.addShapeless("lu_3", <item:londonunderground:platform_tfl_gap>, [
+  <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
+  <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <tag:items:minecraft:signs>, 
+  <tag:items:forge:dyes/white>, <tag:items:forge:dyes/yellow>, <tag:items:forge:dyes/gray>, 
+]);
+
+craftingTable.addShapeless("lu_4", <item:londonunderground:platform_block>, [
+  <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
+  <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
+  <tag:items:forge:dyes/black>, <tag:items:forge:dyes/black>, <tag:items:forge:dyes/black>, 
+]);
+
+craftingTable.addShapeless("lu_5", <item:londonunderground:platform_variant>, [
+  <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
+  <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
+  <tag:items:forge:dyes/gray>, <tag:items:forge:dyes/gray>, <tag:items:forge:dyes/gray>, 
+]);
+
+
+
 // Old code (needs pickaxe to obtain blocks)
 /*
 for i in <tag:items:forge:tools/pickaxes>.elements {
