@@ -71,31 +71,31 @@ craftingTable.addShapeless("logo_lu", <item:londonunderground:tfl_block>, [
 
 // Recipes for lu platforms
 
-craftingTable.addShapeless("lu_1", <item:londonunderground:platform_tfl_1>, [
+craftingTable.addShapeless("lup_1", <item:londonunderground:platform_tfl_1>, [
   <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
   <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
   <tag:items:forge:dyes/white>, <tag:items:forge:dyes/yellow>, <tag:items:forge:dyes/gray>, 
 ]);
 
-craftingTable.addShapeless("lu_2", <item:londonunderground:platform_tfl_island>, [
+craftingTable.addShapeless("lup_2", <item:londonunderground:platform_tfl_island>, [
   <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
   <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
   <tag:items:forge:dyes/white>, <tag:items:forge:dyes/yellow>, <tag:items:forge:dyes/gray>, 
 ]);
 
-craftingTable.addShapeless("lu_3", <item:londonunderground:platform_tfl_gap>, [
+craftingTable.addShapeless("lup_3", <item:londonunderground:platform_tfl_gap>, [
   <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
   <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <tag:items:minecraft:signs>, 
   <tag:items:forge:dyes/white>, <tag:items:forge:dyes/yellow>, <tag:items:forge:dyes/gray>, 
 ]);
 
-craftingTable.addShapeless("lu_4", <item:londonunderground:platform_block>, [
+craftingTable.addShapeless("lup_4", <item:londonunderground:platform_block>, [
   <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
   <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
   <tag:items:forge:dyes/black>, <tag:items:forge:dyes/black>, <tag:items:forge:dyes/black>, 
 ]);
 
-craftingTable.addShapeless("lu_5", <item:londonunderground:platform_variant>, [
+craftingTable.addShapeless("lup_5", <item:londonunderground:platform_variant>, [
   <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
   <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, 
   <tag:items:forge:dyes/gray>, <tag:items:forge:dyes/gray>, <tag:items:forge:dyes/gray>, 
