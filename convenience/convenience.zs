@@ -9,7 +9,7 @@ import crafttweaker.api.recipe.replacement.Replacer;
 <tag:items:c:bright_blocks>.add(<item:minecraft:sea_lantern>);
 <tag:items:c:bright_blocks>.add(<item:minecraft:glowstone>);
 
-// 
+// Add thermal:sulfur_dust to #forge:dyes:yellow
 <tag:items:forge:dyes/yellow>.add(<item:thermal:sulfur_dust>);
 
 // Handy Crash
