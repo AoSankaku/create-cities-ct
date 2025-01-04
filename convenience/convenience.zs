@@ -125,3 +125,13 @@ Replacer.create()
     <tag:items:forge:dyes/yellow>.asIIngredient()
   )
   .execute();
+
+// PIDS easier conversion
+<tag:items:cc:mtr_pids>.add(<item:mtr:pids_1>);
+<tag:items:cc:mtr_pids>.add(<item:mtr:pids_2>);
+<tag:items:cc:mtr_pids>.add(<item:mtr:pids_3>);
+<tag:items:cc:mtr_pids>.add(<item:mtr:pids_4>);
+<tag:items:cc:mtr_pids>.add(<item:mtr:pids_single_arrival_1>);
+for i in <tag:items:cc:mtr_pids>.elements {
+  stoneCutter.addRecipe("pids_" + <tag:items:cc:mtr_pids>.elements.indexOf(i), i, <tag:items:cc:mtr_pids>);
+}
