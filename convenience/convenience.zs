@@ -39,7 +39,7 @@ for x in <block:slide_show:projector>.getPossibleStates() {
 }
 
 craftingTable.addShapeless("slide_show.projector", <item:slide_show:projector>, [
-  <tag:items:c:iron_blocks>, <item:minecraft:redstone_block>, <tag:items:c:glass_blocks>, <tag:items:c:bright_blocks>
+  <tag:items:c:iron_blocks>, <item:minecraft:redstone_block>, <tag:items:forge:glass>, <tag:items:c:bright_blocks>
 ]);
 
 // Seed Oil
