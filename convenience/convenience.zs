@@ -135,3 +135,15 @@ Replacer.create()
 for i in <tag:items:cc:mtr_pids>.elements {
   stoneCutter.addRecipe("pids_" + <tag:items:cc:mtr_pids>.elements.indexOf(i), i, <tag:items:cc:mtr_pids>);
 }
+
+// Rose Gold Ingot (Dust)
+craftingTable.addShapeless("rose_gold_ingot", <item:mca:rose_gold_dust>, [
+  <tag:items:forge:dusts/copper>, <tag:items:forge:dusts/gold>, <tag:items:forge:dusts/gold>, <tag:items:forge:dusts/gold>
+]);
+
+// Energy Tablet using Electrum Ingot
+craftingTable.addShaped("energy_tablet", <item:mekanism:energy_tablet> * 2, [
+  [<item:minecraft:redstone>, <tag:items:forge:ingots/electrum>, <item:minecraft:redstone>],
+  [<item:mekanism:alloy_infused>, <tag:items:forge:ingots/electrum>, <item:mekanism:alloy_infused>],
+  [<item:minecraft:redstone>, <tag:items:forge:ingots/electrum>, <item:minecraft:redstone>]
+]);
