@@ -137,7 +137,7 @@ for i in <tag:items:cc:mtr_pids>.elements {
 }
 
 // Rose Gold Ingot (Dust)
-craftingTable.addShapeless("rose_gold_ingot", <item:mca:rose_gold_dust>, [
+craftingTable.addShapeless("rose_gold_ingot", <item:mca:rose_gold_dust> * 4, [
   <tag:items:forge:dusts/copper>, <tag:items:forge:dusts/gold>, <tag:items:forge:dusts/gold>, <tag:items:forge:dusts/gold>
 ]);
 
