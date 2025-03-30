@@ -147,3 +147,9 @@ craftingTable.addShaped("energy_tablet", <item:mekanism:energy_tablet> * 2, [
   [<item:mekanism:alloy_infused>, <tag:items:forge:ingots/electrum>, <item:mekanism:alloy_infused>],
   [<item:minecraft:redstone>, <tag:items:forge:ingots/electrum>, <item:minecraft:redstone>]
 ]);
+
+craftingTable.remove(<item:refinedstorage:raw_improved_processor>);
+// Raw Improved Processor using Rose Gold Ingot
+craftingTable.addShapeless("raw_improved_processor", <item:refinedstorage:raw_improved_processor>, [
+  <item:refinedstorage:processor_binding>, <tag:items:forge:ingots/gold>, <tag:items:forge:silicon>, <item:minecraft:redstone>
+]);
