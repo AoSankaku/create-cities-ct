@@ -12,6 +12,24 @@ import crafttweaker.api.recipe.replacement.Replacer;
 // Add thermal:sulfur_dust to #forge:dyes:yellow
 <tag:items:forge:dyes/yellow>.add(<item:thermal:sulfur_dust>);
 
+// Add ultimate hoes to quark:big_harvesting_hoes
+var super_hoes = [
+  <item:mekanismtools:refined_obsidian_hoe>,
+  <item:cataclysm_weaponery:ignitium_hoe>,
+  <item:aether:gravitite_hoe>,
+  <item:aether:valkyrie_hoe>,
+  <item:deep_aether:stratus_hoe>,
+  <item:iceandfire:dragonbone_hoe>,
+  <item:iceandfire:dragonsteel_fire_hoe>,
+  <item:iceandfire:dragonsteel_ice_hoe>,
+  <item:iceandfire:dragonsteel_lightning_hoe>,
+  <item:tofucraft:tofu_diamond_hoe>
+];
+<tag:items:quark:big_harvesting_hoes>.add(super_hoes);
+<tag:items:minecraft:tools>.add(super_hoes);
+<tag:items:forge:tools>.add(super_hoes);
+<tag:items:minecraft:hoes>.add(super_hoes);
+
 // Handy Crash
 craftingTable.addShapeless(
   "stone_conv",
