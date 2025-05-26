@@ -145,13 +145,13 @@ Replacer.create()
   .execute();
 
 // PIDS easier conversion
-<tag:items:cc:mtr_pids>.add(<item:mtr:pids_1>);
-<tag:items:cc:mtr_pids>.add(<item:mtr:pids_2>);
-<tag:items:cc:mtr_pids>.add(<item:mtr:pids_3>);
-<tag:items:cc:mtr_pids>.add(<item:mtr:pids_4>);
-<tag:items:cc:mtr_pids>.add(<item:mtr:pids_single_arrival_1>);
-for i in <tag:items:cc:mtr_pids>.elements {
-  stoneCutter.addRecipe("pids_" + <tag:items:cc:mtr_pids>.elements.indexOf(i), i, <tag:items:cc:mtr_pids>);
+<tag:items:create_cities:mtr_pids>.add(<item:mtr:pids_1>);
+<tag:items:create_cities:mtr_pids>.add(<item:mtr:pids_2>);
+<tag:items:create_cities:mtr_pids>.add(<item:mtr:pids_3>);
+<tag:items:create_cities:mtr_pids>.add(<item:mtr:pids_4>);
+<tag:items:create_cities:mtr_pids>.add(<item:mtr:pids_single_arrival_1>);
+for i in <tag:items:create_cities:mtr_pids>.elements {
+  stoneCutter.addRecipe("pids_" + <tag:items:create_cities:mtr_pids>.elements.indexOf(i), i, <tag:items:create_cities:mtr_pids>);
 }
 
 // Rose Gold Ingot (Dust)
@@ -170,4 +170,46 @@ craftingTable.remove(<item:refinedstorage:raw_improved_processor>);
 // Raw Improved Processor using Rose Gold Ingot
 craftingTable.addShapeless("raw_improved_processor", <item:refinedstorage:raw_improved_processor>, [
   <item:refinedstorage:processor_binding>, <tag:items:forge:ingots/gold>, <tag:items:forge:silicon>, <item:minecraft:redstone>
+]);
+
+// Organic Compost
+<tag:items:create_cities:fertilizers>.add([
+  <item:mekanism:bio_fuel>,
+  <item:minecraft:bone_meal>
+]);
+
+<tag:items:create_cities:super_fertilizers>.add([
+  <item:createaddition:biomass>,
+  <item:thermal:compost>
+]);
+
+<tag:items:create_cities:mulch>.add([
+  <item:farmersdelight:tree_bark>,
+  <item:farmersdelight:straw>,
+  <item:mekanism:sawdust>,
+  <item:thermal:sawdust>
+]);
+
+craftingTable.addShapeless("organic_compost_1", <item:farmersdelight:organic_compost> * 1, [
+  <item:minecraft:dirt>, <item:minecraft:rotten_flesh>, <item:minecraft:rotten_flesh>,
+  <tag:items:create_cities:mulch>, <tag:items:create_cities:mulch>, <tag:items:create_cities:fertilizers>,
+  <tag:items:create_cities:fertilizers>, <tag:items:create_cities:fertilizers>, <tag:items:create_cities:fertilizers>,
+]);
+
+craftingTable.addShapeless("organic_compost_2", <item:farmersdelight:organic_compost> * 1, [
+  <item:minecraft:dirt>, <item:minecraft:rotten_flesh>, <item:minecraft:rotten_flesh>,
+  <tag:items:create_cities:mulch>, <tag:items:create_cities:mulch>, <tag:items:create_cities:super_fertilizers>,
+  <tag:items:create_cities:super_fertilizers>
+]);
+
+craftingTable.addShapeless("organic_compost_3", <item:farmersdelight:organic_compost> * 1, [
+  <item:minecraft:dirt>, <tag:items:create_cities:mulch>, <tag:items:create_cities:mulch>,
+  <tag:items:create_cities:mulch>, <tag:items:create_cities:mulch>, <tag:items:create_cities:mulch>, 
+  <tag:items:create_cities:mulch>, <tag:items:create_cities:fertilizers>, <tag:items:create_cities:fertilizers>,
+]);
+
+craftingTable.addShapeless("organic_compost_4", <item:farmersdelight:organic_compost> * 1, [
+  <item:minecraft:dirt>, <tag:items:create_cities:mulch>, <tag:items:create_cities:mulch>,
+  <tag:items:create_cities:mulch>, <tag:items:create_cities:mulch>, <tag:items:create_cities:mulch>, 
+  <tag:items:create_cities:mulch>, <tag:items:create_cities:super_fertilizers>,
 ]);
