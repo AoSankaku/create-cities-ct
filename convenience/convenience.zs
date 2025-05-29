@@ -3,11 +3,24 @@ import crafttweaker.api.ingredient.IIngredient;
 import crafttweaker.api.recipe.replacement.Replacer;
 
 // Glowstone Dust ←→ Prismarine Crystal
-<tag:items:c:glowstone_dusts>.add(<item:minecraft:prismarine_crystals>);
+<tag:items:create_cities:glowstone_dusts>.add(<item:minecraft:prismarine_crystals>);
 
 // Glowstone ←→ Sea Lantern(タグ作成)
-<tag:items:c:bright_blocks>.add(<item:minecraft:sea_lantern>);
-<tag:items:c:bright_blocks>.add(<item:minecraft:glowstone>);
+<tag:items:create_cities:bright_blocks>.add([
+  <item:minecraft:sea_lantern>, <item:minecraft:glowstone>
+]);
+
+// Iron Blocks
+<tag:items:create_cities:iron_blocks>.add([
+  <tag:items:chipped:iron_block>, <tag:items:rechiseled:iron_block>
+]);
+<tag:items:create_cities:iron_blocks>.add(<item:minecraft:iron_block>);
+
+// Iron Blocks
+<tag:items:create_cities:redstone_blocks>.add([
+  <tag:items:chipped:redstone_block>, <tag:items:rechiseled:redstone_block>
+]);
+<tag:items:create_cities:redstone_blocks>.add(<item:minecraft:redstone_block>);
 
 // Add thermal:sulfur_dust to #forge:dyes:yellow
 <tag:items:forge:dyes/yellow>.add(<item:thermal:sulfur_dust>);
@@ -61,15 +74,15 @@ for x in <block:slide_show:projector>.getPossibleStates() {
 }
 
 craftingTable.addShapeless("slide_show.projector", <item:slide_show:projector>, [
-  <tag:items:c:iron_blocks>, <item:minecraft:redstone_block>, <tag:items:forge:glass>, <tag:items:c:bright_blocks>
+  <tag:items:create_cities:iron_blocks>, <item:minecraft:redstone_block>, <tag:items:forge:glass>, <tag:items:create_cities:bright_blocks>, <item:mekanism:basic_control_circuit>
 ]);
 
 // Seed Oil
-<tag:items:c:seeds>.add(<item:supplementaries:flax_seeds>);
+<tag:items:create_cities:seeds>.add(<item:supplementaries:flax_seeds>);
 
 
 // Generate blaze rods from oil
-//<recipetype:create:mixing>.addRecipe("mixed", <item:minecraft:blaze_rod>, [<tag:items:c:all_metal_rods>], [<fluid:minecraft:lava> * 100], 200);
+//<recipetype:create:mixing>.addRecipe("mixed", <item:minecraft:blaze_rod>, [<tag:items:create_cities:all_metal_rods>], [<fluid:minecraft:lava> * 100], 200);
 
 /*
 <recipetype:create:crushing>.addJsonRecipe("netherrack_crushing", {
@@ -135,7 +148,9 @@ craftingTable.addShapeless("true_potato_salad", <item:brewery:potato_salad> * 2,
   <tag:items:forge:pasta>, <item:minecraft:carrot>, <item:farmersdelight:onion>, <item:farmersdelight:onion>, <item:moredelight:diced_potatoes>, <item:moredelight:diced_potatoes>, <item:minecraft:bowl>
 ]);
 
-// Replacement for recipes using yellow dye
+// Replace recipes with invalid salt with valid salt
+<tag:items:forge:dust/salt>.add(<item:minecraft:air>);
+
 Replacer.create()
   .replace<IIngredient>(
     <recipecomponent:crafttweaker:input/ingredients>,

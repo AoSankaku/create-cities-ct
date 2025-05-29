@@ -8,7 +8,7 @@ craftingTable.addShapeless("pids_lu", <item:londonunderground:pids_northern>, [<
 // PIDS pole
 craftingTable.addShaped("pids_lu_poles", <item:londonunderground:pids_pole> * 8, [
   [<item:mtr:pids_pole>, <item:mtr:pids_pole>, <item:mtr:pids_pole>],
-  [<item:mtr:pids_pole>, <tag:items:c:gray_dyes>, <item:mtr:pids_pole>],
+  [<item:mtr:pids_pole>, <tag:items:forge:dyes/gray>, <item:mtr:pids_pole>],
   [<item:mtr:pids_pole>, <item:mtr:pids_pole>, <item:mtr:pids_pole>]
 ]);
 
@@ -16,20 +16,20 @@ craftingTable.addShaped("pids_lu_poles", <item:londonunderground:pids_pole> * 8,
 // Airplane
 /*
 craftingTable.addShaped("airplane_node", <item:mtr:airplane_node> * 32, [
-  [<tag:items:c:iron_ingots>, <tag:items:c:iron_ingots>, <tag:items:c:iron_ingots>],
+  [<tag:items:create_cities:iron_ingots>, <tag:items:create_cities:iron_ingots>, <tag:items:create_cities:iron_ingots>],
   [<item:minecraft:diamond_block>, <item:minecraft:air>, <item:minecraft:diamond_block>],
   [<tag:items:minecraft:logs>, <tag:items:minecraft:logs>, <tag:items:minecraft:logs>]
 ]);
 */
 craftingTable.addShaped("runway_connector", <item:mtr:rail_connector_runway>, [
   [<item:minecraft:diamond_block>, <tag:items:minecraft:rails>, <item:minecraft:diamond_block>],
-  [<item:minecraft:diamond_block>, <tag:items:c:redstone_blocks>, <item:minecraft:diamond_block>],
+  [<item:minecraft:diamond_block>, <tag:items:create_cities:redstone_blocks>, <item:minecraft:diamond_block>],
   [<item:minecraft:air>, <tag:items:minecraft:rails>, <item:minecraft:air>]
 ]);
 /*
 craftingTable.addShaped("airplane_dashboard", <item:mtr:dashboard_4>, [
   [<item:minecraft:diamond>, <item:minecraft:diamond>, <item:minecraft:diamond>],
-  [<tag:items:c:redstone_dusts>, <item:minecraft:glass_pane>, <tag:items:c:glowstone_dusts>],
+  [<tag:items:create_cities:redstone_dusts>, <item:minecraft:glass_pane>, <tag:items:create_cities:glowstone_dusts>],
   [<item:minecraft:diamond>, <item:minecraft:diamond>, <item:minecraft:diamond>]
 ]);
 */
@@ -37,7 +37,7 @@ craftingTable.addShaped("airplane_dashboard", <item:mtr:dashboard_4>, [
 
 // Logo
 craftingTable.addShapeless("logo_lu", <item:londonunderground:tfl_block>, [
-  <item:mtr:metal>, <tag:items:c:blue_dyes>
+  <item:mtr:metal>, <tag:items:forge:dyes/blue>
 ]);
 
 
