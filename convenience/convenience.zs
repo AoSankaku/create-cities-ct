@@ -228,3 +228,38 @@ craftingTable.addShapeless("organic_compost_4", <item:farmersdelight:organic_com
   <tag:items:create_cities:mulch>, <tag:items:create_cities:mulch>, <tag:items:create_cities:mulch>, 
   <tag:items:create_cities:mulch>, <tag:items:create_cities:super_fertilizers>,
 ]);
+
+// Construction Wand (except stone wand)
+// craftingTable.remove(<item:constructionwand:stone_wand>);
+craftingTable.remove(<item:constructionwand:iron_wand>);
+craftingTable.remove(<item:constructionwand:diamond_wand>);
+craftingTable.remove(<item:constructionwand:infinity_wand>);
+craftingTable.remove(<item:constructionwand:core_angel>);
+craftingTable.remove(<item:constructionwand:core_destruction>);
+
+craftingTable.addShaped("cw_iron", <item:constructionwand:iron_wand>, [
+  [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:iron_ingot>],
+  [<item:minecraft:air>, <tag:items:forge:ingots/steel>, <item:refinedstorage:construction_core>],
+  [<tag:items:forge:ingots/steel>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+craftingTable.addShaped("cw_diamond", <item:constructionwand:diamond_wand>, [
+  [<item:minecraft:air>, <item:refinedstorage:construction_core>, <item:minecraft:diamond>],
+  [<item:minecraft:air>, <tag:items:forge:ingots/steel>, <item:refinedstorage:construction_core>],
+  [<tag:items:forge:ingots/steel>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+// Infinity Wand Recipe is in KubeJS
+
+craftingTable.addShaped("cw_angel", <item:constructionwand:core_angel>, [
+  [<item:minecraft:air>, <tag:items:forge:glass_panes>, <tag:items:forge:ingots/gold>],
+  [<tag:items:forge:glass_panes>, <item:angelblockrenewed:angel_block>, <tag:items:forge:glass_panes>],
+  [<tag:items:forge:ingots/gold>, <tag:items:forge:glass_panes>, <item:minecraft:air>]
+]);
+
+craftingTable.addShaped("cw_destruction", <item:constructionwand:core_destruction>, [
+  [<item:minecraft:air>, <tag:items:forge:glass_panes>, <item:minecraft:diamond>],
+  [<tag:items:forge:glass_panes>, <item:refinedstorage:destruction_core>, <tag:items:forge:glass_panes>],
+  [<item:minecraft:diamond>, <tag:items:forge:glass_panes>, <item:minecraft:air>]
+]);
+
