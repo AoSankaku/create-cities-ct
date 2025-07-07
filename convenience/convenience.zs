@@ -148,8 +148,9 @@ craftingTable.addShapeless("true_potato_salad", <item:brewery:potato_salad> * 2,
   <tag:items:forge:pasta>, <item:minecraft:carrot>, <item:farmersdelight:onion>, <item:farmersdelight:onion>, <item:moredelight:diced_potatoes>, <item:moredelight:diced_potatoes>, <item:minecraft:bowl>
 ]);
 
-// Replace recipes with invalid salt with valid salt
+// Disable invalid tags
 <tag:items:forge:dust/salt>.add(<item:minecraft:air>);
+<tag:items:c:helmets>.add(<item:minecraft:air>);
 
 Replacer.create()
   .replace<IIngredient>(
