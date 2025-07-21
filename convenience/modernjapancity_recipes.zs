@@ -1,8 +1,30 @@
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.tag.manager.ITagManager;
+import crafttweaker.api.mod.Mod;
+import crafttweaker.api.tag.MCTag;
+import crafttweaker.api.tag.type.KnownTag;
+import crafttweaker.api.item.ItemDefinition;
+
+
+public class Test {
+  public static val modernjapancity_items = loadedMods.modernjapancity.items;
+} 
 
 
 // White Lines and signs
+
+function bulkAddItemsToTag(targetTag as KnownTag<ItemDefinition>, match_string as string[]) as void {
+  for i in Test.modernjapancity_items {
+    for l in match_string {
+      if (l in i.toString()) {
+        targetTag.add(i.defaultInstance);
+      }
+    }
+  }
+}
+
+bulkAddItemsToTag(<tag:items:create_cities:white_lines>, ["white_arrow_", "road_guide_sign_name_"]);
+
 <tag:items:create_cities:white_lines>.add(
   <item:modernjapancity:white_line>,
   <item:modernjapancity:white_cross_line>,
@@ -12,28 +34,7 @@ import crafttweaker.api.tag.manager.ITagManager;
   <item:modernjapancity:white_line_curve>,
   <item:modernjapancity:stop_lines_and_white_lines_2>,
   <item:modernjapancity:white_rhombus>,
-  <item:modernjapancity:white_bus>,
-  <item:modernjapancity:white_arrow_upright>,
-  <item:modernjapancity:white_arrow_upright_dotted>,
-  <item:modernjapancity:white_arrow_upright_and_left>,
-  <item:modernjapancity:white_arrow_upright_and_left_dotted>,
-  <item:modernjapancity:white_arrow_right>,
-  <item:modernjapancity:white_arrow_right_dotted>,
-  <item:modernjapancity:white_arrow_left>,
-  <item:modernjapancity:white_arrow_left_dotted>,
-  <item:modernjapancity:road_guide_sign_name_station>,
-  <item:modernjapancity:road_guide_sign_name_urbanarea>,
-  <item:modernjapancity:road_guide_sign_name_tunnel>,
-  <item:modernjapancity:road_guide_sign_name_nationalroute>,
-  <item:modernjapancity:road_guide_sign_name_park>,
-  <item:modernjapancity:road_guide_sign_name_shopping>,
-  <item:modernjapancity:road_guide_sign_name_port>,
-  <item:modernjapancity:road_guide_sign_name_airport>,
-  <item:modernjapancity:road_guide_sign_name_prefecturaloffice_a>,
-  <item:modernjapancity:road_guide_sign_name_prefecturaloffice_b>,
-  <item:modernjapancity:road_guide_sign_name_prefecturaloffice_c>,
-  <item:modernjapancity:road_guide_sign_name_metropolitangovernment>,
-  <item:modernjapancity:road_guide_sign_name_highway>
+  <item:modernjapancity:white_bus>
 );
 
 for i in <tag:items:create_cities:white_lines>.elements {
@@ -112,6 +113,7 @@ for i in <tag:items:create_cities:poles/white>.elements {
   <item:modernjapancity:utility_pole_reflector>,
   <item:modernjapancity:utility_pole_scaffold>,
   <item:modernjapancity:utility_pole_top>,
+  <item:modernjapancity:pillar_transformer>,
   <item:modernjapancity:concrete_signal_pole>,
   <item:modernjapancity:concrete_signal_pole_top>,
   <item:modernjapancity:concrete_signal_pole_brace>,
@@ -201,7 +203,7 @@ craftingTable.addShaped("rubber_pole", <item:modernjapancity:rubber_pole> * 8, [
 );
 
 craftingTable.addShapeless("signal", <item:modernjapancity:vehicle_signal_1> * 4, [
-  <item:minecraft:glowstone_dust>, <item:minecraft:white_concrete>, <tag:items:forge:dyes/red>, <tag:items:forge:dyes/yellow>, <tag:items:forge:dyes/green>, 
+  <tag:items:create_cities:glowstone_dusts>, <item:minecraft:white_concrete>, <tag:items:forge:dyes/red>, <tag:items:forge:dyes/yellow>, <tag:items:forge:dyes/green>, 
 ]);
 
 for i in <tag:items:create_cities:signals>.elements {
@@ -214,52 +216,12 @@ for i in <tag:items:create_cities:signals>.elements {
 
 
 // Ads
+bulkAddItemsToTag(<tag:items:create_cities:posters>, ["advertisement_", "advertising_", "store_sign", "store_sticker_"]);
+
 <tag:items:create_cities:posters>.add(
   <item:minecraft:painting>,
-  <item:modernjapancity:advertisement_signbuild>,
-  <item:modernjapancity:advertisement_sign_juku>,
-  <item:modernjapancity:advertisement_sign_mourn>,
-  <item:modernjapancity:advertisement_sign_coffe>,
-  <item:modernjapancity:advertisement_sign_cutsalon>,
-  <item:modernjapancity:advertisement_sign_houseapp>,
-  <item:modernjapancity:advertising_sign_oil>,
-  <item:modernjapancity:advertisement_sign_clinic>,
-  <item:modernjapancity:advertisement_sign_financing>,
-  <item:modernjapancity:advertisement_sign_lent>,
-  <item:modernjapancity:advertising_poster_fire>,
-  <item:modernjapancity:advertising_poster_dash>,
   <item:modernjapancity:poster_nosmoking>,
-  <item:modernjapancity:poster_securitycamera>,
-  <item:modernjapancity:store_sticker_1>,
-  <item:modernjapancity:store_sticker_2>,
-  <item:modernjapancity:store_sticker_3>,
-  <item:modernjapancity:store_signs_financing>,
-  <item:modernjapancity:store_signs_cutsalon>,
-  <item:modernjapancity:store_signs_coffe>,
-  <item:modernjapancity:store_signs_realestate>,
-  <item:modernjapancity:store_signs_bank>,
-  <item:modernjapancity:store_signs_juku>,
-  <item:modernjapancity:store_signs_ramen>,
-  <item:modernjapancity:store_signs_mart>,
-  <item:modernjapancity:store_signs_pharmacy>,
-  <item:modernjapancity:store_signs_convenience_kantou>,
-  <item:modernjapancity:store_signs_convenience_kansai>,
-  <item:modernjapancity:store_sign_book>,
-  <item:modernjapancity:store_sign_karaoke>,
-  <item:modernjapancity:store_sign_homeapp>,
-  <item:modernjapancity:store_sign_companystore>,
-  <item:modernjapancity:store_sign_ricenoodles>,
-  <item:modernjapancity:store_sign_westernrestaurant>,
-  <item:modernjapancity:store_sign_japaneserestaurant>,
-  <item:modernjapancity:store_sign_junkfood>,
-  <item:modernjapancity:store_sign_beefbowl>,
-  <item:modernjapancity:store_sign_undertakers>,
-  <item:modernjapancity:store_sign_watch>,
-  <item:modernjapancity:store_signs_bento>,
-  <item:modernjapancity:store_signs_yakitori>,
-  <item:modernjapancity:store_signs_sushi>,
-  <item:modernjapancity:store_signs_laundry>,
-  <item:modernjapancity:store_signs_rent>
+  <item:modernjapancity:poster_securitycamera>
 );
 
 for i in <tag:items:create_cities:posters>.elements {
@@ -295,54 +257,12 @@ for i in <tag:items:create_cities:signs/road_guide>.elements {
 
 
 // Road signs
+bulkAddItemsToTag(<tag:items:create_cities:signs/road>, ["road_sign_", "landmark_sign", "intersection_name_sign_"]);
+
+/*
 <tag:items:create_cities:signs/road>.add(
-  <item:modernjapancity:road_sign_auxiliary_1>,
-  <item:modernjapancity:road_sign_auxiliary_2>,
-  <item:modernjapancity:road_sign_noparking>,
-  <item:modernjapancity:road_sign_schoolroute>,
-  <item:modernjapancity:road_sign_stop>,
-  <item:modernjapancity:road_sign_crosswalk>,
-  <item:modernjapancity:road_sign_nostoppingorstanding>,
-  <item:modernjapancity:road_sign_noovertaking>,
-  <item:modernjapancity:road_sign_30>,
-  <item:modernjapancity:road_sign_40>,
-  <item:modernjapancity:road_sign_50>,
-  <item:modernjapancity:road_sign_60>,
-  <item:modernjapancity:road_sign_noentry>,
-  <item:modernjapancity:road_sign_crossroad>,
-  <item:modernjapancity:road_sign_tjunction_a>,
-  <item:modernjapancity:road_sign_tjunction_b>,
-  <item:modernjapancity:road_sign_tjunction_c>,
-  <item:modernjapancity:road_sign_slip>,
-  <item:modernjapancity:road_sign_railway>,
-  <item:modernjapancity:road_sign_oneway_left>,
-  <item:modernjapancity:road_sign_oneway_right>,
-  <item:modernjapancity:road_sign_nocorssing>,
-  <item:modernjapancity:road_sign_streetname>,
-  <item:modernjapancity:road_sign_designated_direction_upright>,
-  <item:modernjapancity:road_sign_designated_direction_right>,
-  <item:modernjapancity:road_sign_designated_direction_left>,
-  <item:modernjapancity:road_sign_designated_direction_upright_right>,
-  <item:modernjapancity:road_sign_designated_direction_upright_left>,
-  <item:modernjapancity:road_sign_designated_direction_left_right>,
-  <item:modernjapancity:landmark_sign_station>,
-  <item:modernjapancity:landmark_sign_subway>,
-  <item:modernjapancity:landmark_sign_hospital>,
-  <item:modernjapancity:landmark_sign_park>,
-  <item:modernjapancity:intersection_name_sign_block_1>,
-  <item:modernjapancity:intersection_name_sign_block_2>,
-  <item:modernjapancity:intersection_name_sign_block_3>,
-  <item:modernjapancity:intersection_name_sign_block_4>,
-  <item:modernjapancity:intersection_name_sign_block_5>,
-  <item:modernjapancity:intersection_name_sign_block_6>,
-  <item:modernjapancity:intersection_name_sign_station>,
-  <item:modernjapancity:intersection_name_sign_park>,
-  <item:modernjapancity:intersection_name_sign_school>,
-  <item:modernjapancity:intersection_name_sign_koban>,
-  <item:modernjapancity:intersection_name_sign_housing>,
-  <item:modernjapancity:intersection_name_sign_newtown>,
-  <item:modernjapancity:intersection_name_sign_tunnel>
 );
+*/
 
 for i in <tag:items:create_cities:signs/road>.elements {
   stoneCutter.addRecipe(
@@ -415,15 +335,10 @@ craftingTable.addShapeless(
 
 
 // Road signs
+bulkAddItemsToTag(<tag:items:create_cities:signs/station_information>, ["station_information_sign_"]);
+
 <tag:items:create_cities:signs/station_information>.add(
   <item:mtr:railway_sign_2_even>,
-  <item:modernjapancity:station_information_sign_platform>,
-  <item:modernjapancity:station_information_sign_exit>,
-  <item:modernjapancity:station_information_sign_ticket>,
-  <item:modernjapancity:station_information_sign_farewell>,
-  <item:modernjapancity:station_information_sign_others>,
-  <item:modernjapancity:station_information_sign_platform_1>,
-  <item:modernjapancity:station_information_sign_gates>,
   <item:modernjapancity:proximity_indicator>
 );
 
@@ -516,3 +431,10 @@ craftingTable.addShaped("mjc_crossing_signal", <item:modernjapancity:railroad_cr
 craftingTable.addShaped("mjc_crossing_gate", <item:modernjapancity:railway_crossing_gate> * 2, [
   [<item:create_new_age:basic_motor>, <item:minecraft:black_concrete>, <item:minecraft:yellow_concrete>]
 ]);
+
+// Emergency exit light
+craftingTable.addShapeless(
+  "emergency_exit",
+  <item:modernjapancity:emergency_exit_light_green>,
+  [<tag:items:create_cities:glowstone_dusts>, <item:minecraft:quartz_slab>]
+);
