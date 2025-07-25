@@ -21,6 +21,7 @@ craftingTable.addShaped("airplane_node", <item:mtr:airplane_node> * 32, [
   [<tag:items:minecraft:logs>, <tag:items:minecraft:logs>, <tag:items:minecraft:logs>]
 ]);
 */
+craftingTable.remove(<item:mtr:rail_connector_runway>)
 craftingTable.addShaped("runway_connector", <item:mtr:rail_connector_runway>, [
   [<item:minecraft:diamond_block>, <tag:items:minecraft:rails>, <item:minecraft:diamond_block>],
   [<item:minecraft:diamond_block>, <tag:items:create_cities:redstone_blocks>, <item:minecraft:diamond_block>],
