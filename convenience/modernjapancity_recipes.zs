@@ -392,7 +392,7 @@ craftingTable.addShapeless(
 );
 
 var colors = ["red", "orange", "yellow", "lime", "green", "cyan", "light_blue", "blue", "purple", "pink", "magenta", "brown", "white", "light_gray", "gray", "black"];
-  for i in colors {
+for i in colors {
   craftingTable.addShapeless(
     "mjc_home_door_wall_" + i,  
     <item:modernjapancity:home_door_wall_${i}>,
