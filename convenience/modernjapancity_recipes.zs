@@ -450,3 +450,49 @@ for i in <tag:items:create_cities:signs/exit>.elements {
     <tag:items:create_cities:signs/exit>
   );
 }
+
+
+// Old concrete and asphalt
+
+furnace.addRecipe(
+  "old_concrete",
+  <item:modernjapancity:old_concrete>, <item:minecraft:gray_concrete>, 1.0, 30
+);
+
+stoneCutter.addRecipe(
+  "concrete_arch",
+  <item:modernjapancity:concrete_arch>,
+  <item:modernjapancity:old_concrete>
+);
+
+craftingTable.addShapeless(
+  "concrete_arch_light",
+  <item:modernjapancity:concrete_arch_light>,
+  [<item:modernjapancity:fluorescent_light_1>, <item:modernjapancity:concrete_arch>]
+);
+
+furnace.addRecipe(
+  "asphalt",
+  <item:modernjapancity:asphalt>, <item:minecraft:gray_concrete>, 1.0, 30
+);
+
+furnace.addRecipe(
+  "old_asphalt",
+  <item:modernjapancity:old_asphalt>, <item:modernjapancity:asphalt>, 1.0, 30
+);
+
+var asphalt_colors = ["red", "blue", "green"];
+for i in asphalt_colors {
+  <tag:items:create_cities:asphalt_blocks>.add(<item:modernjapancity:${i}_asphalt>);
+  craftingTable.addShaped(
+    "asphalt_" + i,
+    <item:modernjapancity:${i}_asphalt>,
+    [
+      [<item:modernjapancity:asphalt>, <item:modernjapancity:asphalt>, <item:modernjapancity:asphalt>],
+      [<item:modernjapancity:asphalt>, <tagmanager:items>.tag("forge:dyes/" + i), <item:modernjapancity:asphalt>],
+      [<item:modernjapancity:asphalt>, <item:modernjapancity:asphalt>, <item:modernjapancity:asphalt>]
+    ]
+  );
+}
+<tag:items:create_cities:asphalt_blocks>.add(<item:modernjapancity:asphalt>, <item:modernjapancity:old_asphalt>);
+
