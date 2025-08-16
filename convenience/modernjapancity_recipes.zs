@@ -513,6 +513,9 @@ for i in <tag:items:create_cities:asphalt_blocks>.elements {
   );
 }
 
+
+// CurbStone
+
 craftingTable.addShaped(
   "curbstone",
   <item:modernjapancity:curbstone> * 4,
@@ -521,3 +524,51 @@ craftingTable.addShaped(
     [<item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>]
   ]
 );
+
+
+// Bracelets and Wires
+
+craftingTable.addShaped(
+  "bracelet_insulator",
+  <item:modernjapancity:bracelet_insulator> * 2,
+  [
+    [<item:create_new_age:electrical_connector>, <item:minecraft:air>, <item:create_new_age:electrical_connector>],
+    [<tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>],
+    [<item:minecraft:iron_bars>, <item:minecraft:air>, <item:minecraft:iron_bars>]
+  ]
+);
+
+craftingTable.addShaped(
+  "bracelet_insulator2",
+  <item:modernjapancity:bracelet_insulator> * 2,
+  [
+    [<item:createaddition:connector>, <item:minecraft:air>, <item:createaddition:connector>],
+    [<tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>],
+    [<item:minecraft:iron_bars>, <item:minecraft:air>, <item:minecraft:iron_bars>]
+  ]
+);
+
+craftingTable.addShaped(
+  "bracelet",
+  <item:modernjapancity:bracelet> * 2,
+  [
+    [<tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>],
+    [<item:minecraft:iron_bars>, <item:minecraft:air>, <item:minecraft:iron_bars>]
+  ]
+);
+
+craftingTable.addShaped(
+  "bracelet_parts",
+  <item:modernjapancity:curbstone> * 2,
+  [
+    [<tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>],
+    [<item:minecraft:iron_bars>, <item:minecraft:air>]
+  ]
+);
+
+craftingTable.addShapeless(
+  "wire",
+  <item:modernjapancity:wire>,
+  [<item:createaddition:copper_wire>]
+);
+
