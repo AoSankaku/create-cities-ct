@@ -2,14 +2,6 @@ import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.ingredient.IIngredient;
 import crafttweaker.api.recipe.replacement.Replacer;
 
-// Glowstone Dust ←→ Prismarine Crystal
-<tag:items:create_cities:glowstone_dusts>.add(<item:minecraft:prismarine_crystals>);
-
-// Glowstone ←→ Sea Lantern(タグ作成)
-<tag:items:create_cities:bright_blocks>.add([
-  <item:minecraft:sea_lantern>, <item:minecraft:glowstone>
-]);
-
 // Iron Blocks
 <tag:items:create_cities:iron_blocks>.add([
   <tag:items:chipped:iron_block>, <tag:items:rechiseled:iron_block>
