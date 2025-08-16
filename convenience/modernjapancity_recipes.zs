@@ -4,6 +4,7 @@ import crafttweaker.api.mod.Mod;
 import crafttweaker.api.tag.MCTag;
 import crafttweaker.api.tag.type.KnownTag;
 import crafttweaker.api.item.ItemDefinition;
+import crafttweaker.api.recipe.FurnaceRecipeManager;
 
 
 public class Test {
@@ -496,3 +497,27 @@ for i in asphalt_colors {
 }
 <tag:items:create_cities:asphalt_blocks>.add(<item:modernjapancity:asphalt>, <item:modernjapancity:old_asphalt>);
 
+
+for i in <tag:items:create_cities:asphalt_blocks>.elements {
+  craftingTable.addShaped(
+    "asphalt_" + i.registryName.path,
+    <item:${i.registryName.toString()}_slab> * 6,
+    [
+      [i as IItemStack, i as IItemStack, i as IItemStack]
+    ]
+  );
+  stoneCutter.addRecipe(
+    "asphalt_stonecutting_" + i.registryName.path,
+    <item:${i.registryName.toString()}_slab> * 2,
+    i as IItemStack
+  );
+}
+
+craftingTable.addShaped(
+  "curbstone",
+  <item:modernjapancity:curbstone> * 4,
+  [
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:stone_bricks>],
+    [<item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>, <item:minecraft:stone_bricks>]
+  ]
+);
