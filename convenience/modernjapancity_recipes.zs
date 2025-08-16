@@ -438,3 +438,15 @@ craftingTable.addShapeless(
   <item:modernjapancity:emergency_exit_light_green>,
   [<tag:items:create_cities:glowstone_dusts>, <item:minecraft:quartz_slab>, <tag:items:forge:dyes/green>]
 );
+
+<tag:items:create_cities:signs/exit>.add(
+  <item:modernjapancity:emergency_exit_light_green>,
+  <item:modernjapancity:emergency_exit_light_white>
+);
+for i in <tag:items:create_cities:signs/exit>.elements {
+  stoneCutter.addRecipe(
+    "exit_signs" + <tag:items:create_cities:signs/exit>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:signs/exit>
+  );
+}
