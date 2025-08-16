@@ -436,5 +436,5 @@ craftingTable.addShaped("mjc_crossing_gate", <item:modernjapancity:railway_cross
 craftingTable.addShapeless(
   "emergency_exit",
   <item:modernjapancity:emergency_exit_light_green>,
-  [<tag:items:create_cities:glowstone_dusts>, <item:minecraft:quartz_slab>]
+  [<tag:items:create_cities:glowstone_dusts>, <item:minecraft:quartz_slab>, <tag:items:forge:dyes/green>]
 );
