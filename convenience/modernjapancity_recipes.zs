@@ -435,7 +435,7 @@ craftingTable.addShaped("mjc_crossing_gate", <item:modernjapancity:railway_cross
 
 // Emergency exit light
 craftingTable.addShapeless(
-  "emergency_exit",
+  "mjc_emergency_exit",
   <item:modernjapancity:emergency_exit_light_green>,
   [<tag:items:create_cities:glowstone_dusts>, <item:minecraft:quartz_slab>, <tag:items:forge:dyes/green>]
 );
@@ -446,7 +446,7 @@ craftingTable.addShapeless(
 );
 for i in <tag:items:create_cities:signs/exit>.elements {
   stoneCutter.addRecipe(
-    "exit_signs" + <tag:items:create_cities:signs/exit>.elements.indexOf(i),
+    "mjc_exit_signs" + <tag:items:create_cities:signs/exit>.elements.indexOf(i),
     i,
     <tag:items:create_cities:signs/exit>
   );
@@ -456,29 +456,29 @@ for i in <tag:items:create_cities:signs/exit>.elements {
 // Old concrete and asphalt
 
 furnace.addRecipe(
-  "old_concrete",
+  "mjc_old_concrete",
   <item:modernjapancity:old_concrete>, <item:minecraft:gray_concrete>, 1.0, 30
 );
 
 stoneCutter.addRecipe(
-  "concrete_arch",
+  "mjc_concrete_arch",
   <item:modernjapancity:concrete_arch>,
   <item:modernjapancity:old_concrete>
 );
 
 craftingTable.addShapeless(
-  "concrete_arch_light",
+  "mjc_concrete_arch_light",
   <item:modernjapancity:concrete_arch_light>,
   [<item:modernjapancity:fluorescent_light_1>, <item:modernjapancity:concrete_arch>]
 );
 
 furnace.addRecipe(
-  "asphalt",
+  "mjc_asphalt",
   <item:modernjapancity:asphalt>, <item:minecraft:gray_concrete>, 1.0, 30
 );
 
 furnace.addRecipe(
-  "old_asphalt",
+  "mjc_old_asphalt",
   <item:modernjapancity:old_asphalt>, <item:modernjapancity:asphalt>, 1.0, 30
 );
 
@@ -486,7 +486,7 @@ var asphalt_colors = ["red", "blue", "green"];
 for i in asphalt_colors {
   <tag:items:create_cities:asphalt_blocks>.add(<item:modernjapancity:${i}_asphalt>);
   craftingTable.addShaped(
-    "asphalt_" + i,
+    "mjc_asphalt_" + i,
     <item:modernjapancity:${i}_asphalt>,
     [
       [<item:modernjapancity:asphalt>, <item:modernjapancity:asphalt>, <item:modernjapancity:asphalt>],
@@ -500,14 +500,14 @@ for i in asphalt_colors {
 
 for i in <tag:items:create_cities:asphalt_blocks>.elements {
   craftingTable.addShaped(
-    "asphalt_" + i.registryName.path,
+    "mjc_asphalt_" + i.registryName.path,
     <item:${i.registryName.toString()}_slab> * 6,
     [
       [i as IItemStack, i as IItemStack, i as IItemStack]
     ]
   );
   stoneCutter.addRecipe(
-    "asphalt_stonecutting_" + i.registryName.path,
+    "mjc_asphalt_stonecutting_" + i.registryName.path,
     <item:${i.registryName.toString()}_slab> * 2,
     i as IItemStack
   );
@@ -517,7 +517,7 @@ for i in <tag:items:create_cities:asphalt_blocks>.elements {
 // CurbStone
 
 craftingTable.addShaped(
-  "curbstone",
+  "mjc_curbstone",
   <item:modernjapancity:curbstone> * 4,
   [
     [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:stone_bricks>],
@@ -529,7 +529,7 @@ craftingTable.addShaped(
 // Bracelets and Wires
 
 craftingTable.addShaped(
-  "bracelet_insulator",
+  "mjc_bracelet_insulator",
   <item:modernjapancity:bracelet_insulator> * 2,
   [
     [<item:create_new_age:electrical_connector>, <item:minecraft:air>, <item:create_new_age:electrical_connector>],
@@ -539,7 +539,7 @@ craftingTable.addShaped(
 );
 
 craftingTable.addShaped(
-  "bracelet_insulator2",
+  "mjc_bracelet_insulator2",
   <item:modernjapancity:bracelet_insulator> * 2,
   [
     [<item:createaddition:connector>, <item:minecraft:air>, <item:createaddition:connector>],
@@ -549,7 +549,7 @@ craftingTable.addShaped(
 );
 
 craftingTable.addShaped(
-  "bracelet",
+  "mjc_bracelet",
   <item:modernjapancity:bracelet> * 2,
   [
     [<tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>],
@@ -558,7 +558,7 @@ craftingTable.addShaped(
 );
 
 craftingTable.addShaped(
-  "bracelet_parts",
+  "mjc_bracelet_parts",
   <item:modernjapancity:curbstone> * 2,
   [
     [<tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>],
@@ -567,7 +567,7 @@ craftingTable.addShaped(
 );
 
 craftingTable.addShapeless(
-  "wire",
+  "mjc_wire",
   <item:modernjapancity:wire>,
   [<item:createaddition:copper_wire>]
 );
