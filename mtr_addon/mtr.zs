@@ -43,11 +43,13 @@ craftingTable.addShapeless("logo_lu", <item:londonunderground:tfl_block>, [
 
 
 // Platforms(London Underground)
-<tag:blocks:minecraft:mineable/pickaxe>.add(<block:londonunderground:platform_tfl_1>);
-<tag:blocks:minecraft:mineable/pickaxe>.add(<block:londonunderground:platform_tfl_island>);
-<tag:blocks:minecraft:mineable/pickaxe>.add(<block:londonunderground:platform_tfl_gap>);
-<tag:blocks:minecraft:mineable/pickaxe>.add(<block:londonunderground:platform_block>);
-<tag:blocks:minecraft:mineable/pickaxe>.add(<block:londonunderground:platform_variant>);
+<tag:blocks:minecraft:mineable/pickaxe>.add(
+  <block:londonunderground:platform_tfl_1>,
+  <block:londonunderground:platform_tfl_island>,
+  <block:londonunderground:platform_tfl_gap>,
+  <block:londonunderground:platform_block>,
+  <block:londonunderground:platform_variant>
+);
 
 <block:londonunderground:platform_tfl_1>.addLootModifier(
   "lu_platform_tfl_1",
