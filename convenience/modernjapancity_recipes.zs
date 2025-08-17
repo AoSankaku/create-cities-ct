@@ -572,3 +572,69 @@ craftingTable.addShapeless(
   [<item:createaddition:copper_wire>]
 );
 
+
+// Acoustic signal speaker
+
+craftingTable.addShapeless(
+  "mjc_signal_speaker",
+  <item:modernjapancity:signal_speaker>,
+  [<item:supplementaries:speaker_block>, <item:minecraft:iron_bars>]
+);
+
+
+// Postbox
+
+craftingTable.addShaped(
+  "mjc_postbox",
+  <item:modernjapancity:postbox> * 2,
+  [
+    [<item:minecraft:red_concrete>, <item:minecraft:red_concrete>, <item:minecraft:red_concrete>],
+    [<item:minecraft:red_concrete>, <tag:items:create:postboxes>, <item:minecraft:red_concrete>],
+    [<item:minecraft:red_concrete>, <item:minecraft:red_concrete>, <item:minecraft:red_concrete>]
+  ]
+);
+
+
+// Fire alarm box
+
+craftingTable.addShapeless(
+  "mjc_fire_alarm_box",
+  <item:modernjapancity:fire_alarm_box>,
+  [<item:mekanism:industrial_alarm>, <item:minecraft:white_concrete>]
+);
+
+craftingTable.addShapeless(
+  "mjc_fire_alarm_box2",
+  <item:modernjapancity:fire_alarm_box>,
+  [<item:securitycraft:alarm>, <item:minecraft:white_concrete>]
+);
+
+
+// Fire extinguisher box
+
+craftingTable.addShapeless(
+  "mjc_fire_extinguisher_box",
+  <item:modernjapancity:fire_extinguisher_box>,
+  [<item:mekanism:basic_chemical_tank>, <item:minecraft:red_concrete>]
+);
+
+
+// Concrete stair
+
+craftingTable.addShaped(
+  "mjc_concrete_staircase",
+  <item:modernjapancity:concrete_staircase> * 4,
+  [
+    [<item:modernjapancity:old_concrete>, <item:minecraft:air>, <item:minecraft:air>],
+    [<item:modernjapancity:old_concrete>, <item:modernjapancity:old_concrete>, <item:minecraft:air>],
+    [<item:modernjapancity:old_concrete>, <item:modernjapancity:old_concrete>, <item:modernjapancity:old_concrete>]
+  ]
+);
+
+stoneCutter.addRecipe(
+  "mjc_concrete_staircase_stonecutting",
+  <item:modernjapancity:concrete_staircase>,
+  <item:modernjapancity:old_concrete>
+);
+
+
