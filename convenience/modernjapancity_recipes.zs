@@ -1312,5 +1312,151 @@ craftingTable.addShapeless(
 );
 
 
+// Glass Windows and Doors
+
+craftingTable.addShaped(
+  "mjc_glass_window",
+  <item:modernjapancity:glass_window>,
+  [
+    [<item:minecraft:iron_nugget>, <item:minecraft:iron_nugget>, <item:minecraft:iron_nugget>],
+    [<item:minecraft:iron_nugget>, <tag:items:forge:glass_panes>, <item:minecraft:iron_nugget>],
+    [<item:minecraft:iron_nugget>, <item:minecraft:iron_nugget>, <item:minecraft:iron_nugget>]
+  ]
+);
+
+craftingTable.addShapeless(
+  "mjc_glass_window_2m",
+  <item:modernjapancity:glass_window_2m>,
+  [
+    <item:modernjapancity:glass_window>, <item:modernjapancity:glass_window>
+  ]
+);
+
+craftingTable.addShapeless(
+  "mjc_glass_door_left",
+  <item:modernjapancity:glass_door_left>,
+  [
+    <tag:items:minecraft:doors>, <item:modernjapancity:glass_window_2m>
+  ]
+);
+
+craftingTable.addShapeless(
+  "mjc_glass_door_right",
+  <item:modernjapancity:glass_door_right>,
+  [
+    <item:modernjapancity:glass_door_left>
+  ]
+);
+
+craftingTable.addShapeless(
+  "mjc_conv_glass_door_right",
+  <item:modernjapancity:glass_door_left>,
+  [
+    <item:modernjapancity:glass_door_right>
+  ]
+);
+
+craftingTable.addShapeless(
+  "mjc_electric_door_left",
+  <item:modernjapancity:electric_sliding_door_left>,
+  [
+    <item:modernjapancity:glass_door_left>, <item:minecraft:redstone>
+  ]
+);
+
+craftingTable.addShapeless(
+  "mjc_electric_door_right",
+  <item:modernjapancity:electric_sliding_door_right>,
+  [
+    <item:modernjapancity:glass_door_right>, <item:minecraft:redstone>
+  ]
+);
+
+craftingTable.addShapeless(
+  "mjc_conv_electric_door_left",
+  <item:modernjapancity:electric_sliding_door_left>,
+  [
+    <item:modernjapancity:electric_sliding_door_right>
+  ]
+);
+
+craftingTable.addShapeless(
+  "mjc_conv_electric_door_right",
+  <item:modernjapancity:electric_sliding_door_right>,
+  [
+    <item:modernjapancity:electric_sliding_door_left>
+  ]
+);
 
 
+// Alminium Door
+
+craftingTable.addShapeless(
+  "mjc_zinc_door",
+  <item:modernjapancity:aluminum_sliding_door> * 2,
+  [
+    <item:createdeco:zinc_door>, <item:createdeco:zinc_door>
+  ]
+);
+
+
+// LED Downlight
+
+stoneCutter.addRecipe(
+  "mjc_led_downlight",
+  <item:modernjapancity:led_downlight> * 4,
+  <tag:items:mekanismadditions:glow_panels>
+);
+
+
+// Shop Curtain
+
+craftingTable.addShaped(
+  "mjc_white_shop_curtain",
+  <item:modernjapancity:white_shop_curtain>,
+  [
+    [<item:minecraft:stick>, <item:minecraft:stick>],
+    [<item:minecraft:white_carpet>, <item:minecraft:white_carpet>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_red_shop_curtain",
+  <item:modernjapancity:red_shop_curtain>,
+  [
+    [<item:minecraft:stick>, <item:minecraft:stick>],
+    [<item:minecraft:red_carpet>, <item:minecraft:red_carpet>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_blue_shop_curtain",
+  <item:modernjapancity:blue_shop_curtain>,
+  [
+    [<item:minecraft:stick>, <item:minecraft:stick>],
+    [<item:minecraft:blue_carpet>, <item:minecraft:blue_carpet>]
+  ]
+);
+
+
+// Outdoor Unit
+
+craftingTable.addShaped(
+  "mjc_outdoor_unit",
+  <item:modernjapancity:outdoor_unit>,
+  [
+    [<item:minecraft:iron_block>, <item:create:propeller>]
+  ]
+);
+
+craftingTable.addShapeless(
+  "mjc_wall_outdoor_unit",
+  <item:modernjapancity:wall_mounted_outdoor_unit>,
+  [<item:modernjapancity:outdoor_unit>]
+);
+
+craftingTable.addShapeless(
+  "mjc_rev_outdoor_unit",
+  <item:modernjapancity:outdoor_unit>,
+  [<item:modernjapancity:wall_mounted_outdoor_unit>]
+);
