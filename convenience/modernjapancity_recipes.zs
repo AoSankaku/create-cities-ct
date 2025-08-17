@@ -944,3 +944,32 @@ craftingTable.addShaped(
     [<item:minecraft:iron_ingot>, <tag:items:forge:glass_panes>, <item:minecraft:iron_ingot>]
   ]
 );
+
+
+// Braille Blocks
+craftingTable.addShaped(
+  "mjc_braille_block_caution_4",
+  <item:modernjapancity:braille_block_caution_4> * 4,
+  [
+    [<item:minecraft:yellow_concrete>, <item:minecraft:yellow_concrete>],
+  ]
+);
+
+<tag:items:create_cities:braille_blocks/2>.add(
+  <item:modernjapancity:braille_block_induction>,
+  <item:modernjapancity:braille_block_caution>,
+  <item:modernjapancity:point_block_with_inner_line>
+);
+
+for i in <tag:items:create_cities:braille_blocks/2>.elements {
+  stoneCutter.addRecipe(
+    "mjc_braille" + <tag:items:create_cities:braille_blocks/2>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:braille_blocks/2>
+  );
+  stoneCutter.addRecipe(
+    "mjc_braille_to_half" + <tag:items:create_cities:braille_blocks/2>.elements.indexOf(i),
+    i as IItemStack * 2,
+    <item:modernjapancity:braille_block_caution_4>
+  );
+}
