@@ -307,6 +307,10 @@ bulkAddItemsToTag(<tag:items:create_cities:signs/road/large>, ["landmark_sign", 
   <item:modernjapancity:fire_hydrant_sign>
 );
 
+<tag:items:create_cities:signs/road/large>.add(
+  <item:modernjapancity:bus_stop>
+);
+
 for i in <tag:items:create_cities:signs/road>.elements {
   stoneCutter.addRecipe(
     "road_sign_" + <tag:items:create_cities:signs/road>.elements.indexOf(i),
