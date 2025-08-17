@@ -156,6 +156,48 @@ craftingTable.addShaped("orange_pole", <item:modernjapancity:orange_pole> * 16, 
   [<item:minecraft:orange_concrete>]
 ]);
 
+<tag:items:create_cities:poles/orange>.add(
+  <item:modernjapancity:orange_pole>,
+  <item:modernjapancity:caution_plate>,
+  <item:modernjapancity:caution_plate_oblique>
+);
+
+for i in <tag:items:create_cities:poles/orange>.elements {
+  stoneCutter.addRecipe(
+    "orange_poles_" + <tag:items:create_cities:poles/orange>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:poles/orange>
+  );
+}
+
+
+// Curve Mirrors
+craftingTable.addShaped("curve_mirror", <item:modernjapancity:curve_mirror> * 12, [
+  [<tag:items:create_cities:poles/orange>, <tag:items:forge:ingots/silver>, <tag:items:forge:glass/colorless>],
+  [<tag:items:create_cities:poles/orange>, <item:minecraft:air>, <item:minecraft:air>],
+  [<tag:items:create_cities:poles/orange>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+craftingTable.addShapeless("curve_mirror_oblique", <item:modernjapancity:curve_mirror_oblique>, [
+  <item:modernjapancity:curve_mirror>
+]);
+craftingTable.addShapeless("reverse_curve_mirror_oblique", <item:modernjapancity:curve_mirror>, [
+  <item:modernjapancity:curve_mirror_oblique>
+]);
+
+craftingTable.addShapeless("double_curve_mirror", <item:modernjapancity:double_curve_mirror>, [
+  <item:modernjapancity:curve_mirror>, <item:modernjapancity:curve_mirror>
+]);
+craftingTable.addShapeless("double_curve_mirror_oblique", <item:modernjapancity:double_curve_mirror_oblique>, [
+  <item:modernjapancity:curve_mirror_oblique>, <item:modernjapancity:curve_mirror_oblique>
+]);
+craftingTable.addShapeless("conv_double_curve_mirror_oblique", <item:modernjapancity:double_curve_mirror>, [
+  <item:modernjapancity:double_curve_mirror_oblique>
+]);
+craftingTable.addShapeless("reverse_conv_double_curve_mirror_oblique", <item:modernjapancity:double_curve_mirror_oblique>, [
+  <item:modernjapancity:double_curve_mirror>
+]);
+
 
 // Yellow and black pole
 craftingTable.addShaped("ybpole", <item:modernjapancity:yellow_and_black_pole> * 16, [
@@ -241,7 +283,8 @@ for i in <tag:items:create_cities:posters>.elements {
   <item:modernjapancity:road_guide_sign_108_b_1>,
   <item:modernjapancity:road_guide_sign_108_b_2>,
   <item:modernjapancity:road_guide_sign_108_b_3>,
-  <item:modernjapancity:road_guide_signs_balustrade>
+  <item:modernjapancity:road_guide_signs_balustrade>,
+  <item:modernjapancity:fire_hydrant_sign>
 );
 
 craftingTable.addShapeless("road_guide_sign", <item:modernjapancity:road_guide_sign_base> * 2, [
