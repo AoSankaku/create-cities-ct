@@ -106,6 +106,39 @@ craftingTable.addShapeless("lup_5", <item:londonunderground:platform_variant>, [
 
 
 
+// Ceiling light
+
+<tag:items:create_cities:lights/ceiling/station>.add(
+  <item:mtr:ceiling>,
+  <item:mtr:ceiling_light>,
+  <item:mtr:ceiling_no_light>,
+  <item:londonunderground:station_light>,
+  <item:modernjapancity:fluorescent_light>,
+  <item:modernjapancity:fluorescent_light_1>
+);
+
+<tag:blocks:minecraft:mineable/pickaxe>.add(<block:londonunderground:station_light>);
+
+<block:londonunderground:station_light>.addLootModifier(
+  "lu_station_light",
+  CommonLootModifiers.add(<item:londonunderground:station_light>)
+);
+
+for i in <tag:items:create_cities:lights/ceiling/station>.elements {
+  stoneCutter.addRecipe(
+    "ceiling_light_station" + <tag:items:create_cities:lights/ceiling/station>.elements.indexOf(i),
+    i as IItemStack,
+    <tag:items:create_cities:lights/ceiling/station>
+  );
+}
+
+// Neon Tube * 1 => Ceiling Light * 3
+
+craftingTable.addShaped("ceiling_light_from_neon_tube", <item:londonunderground:station_light> * 9, [
+  [<item:neoncraft:neon_tube>, <item:neoncraft:neon_tube>, <item:neoncraft:neon_tube>]
+]);
+
+
 // Old code (needs pickaxe to obtain blocks)
 /*
 for i in <tag:items:forge:tools/pickaxes>.elements {
