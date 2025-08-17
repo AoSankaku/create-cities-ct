@@ -283,8 +283,7 @@ for i in <tag:items:create_cities:posters>.elements {
   <item:modernjapancity:road_guide_sign_108_b_1>,
   <item:modernjapancity:road_guide_sign_108_b_2>,
   <item:modernjapancity:road_guide_sign_108_b_3>,
-  <item:modernjapancity:road_guide_signs_balustrade>,
-  <item:modernjapancity:fire_hydrant_sign>
+  <item:modernjapancity:road_guide_signs_balustrade>
 );
 
 craftingTable.addShapeless("road_guide_sign", <item:modernjapancity:road_guide_sign_base> * 2, [
@@ -304,10 +303,9 @@ for i in <tag:items:create_cities:signs/road_guide>.elements {
 bulkAddItemsToTag(<tag:items:create_cities:signs/road>, ["road_sign_"]);
 bulkAddItemsToTag(<tag:items:create_cities:signs/road/large>, ["landmark_sign", "intersection_name_sign_", "toll_booth_electric_sign_", "sleeve_sign_"]);
 
-/*
 <tag:items:create_cities:signs/road>.add(
+  <item:modernjapancity:fire_hydrant_sign>
 );
-*/
 
 for i in <tag:items:create_cities:signs/road>.elements {
   stoneCutter.addRecipe(
