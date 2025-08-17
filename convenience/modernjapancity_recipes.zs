@@ -301,7 +301,8 @@ for i in <tag:items:create_cities:signs/road_guide>.elements {
 
 
 // Road signs
-bulkAddItemsToTag(<tag:items:create_cities:signs/road>, ["road_sign_", "landmark_sign", "intersection_name_sign_"]);
+bulkAddItemsToTag(<tag:items:create_cities:signs/road>, ["road_sign_"]);
+bulkAddItemsToTag(<tag:items:create_cities:signs/road/large>, ["landmark_sign", "intersection_name_sign_", "toll_booth_electric_sign_", "sleeve_sign_"]);
 
 /*
 <tag:items:create_cities:signs/road>.add(
@@ -313,6 +314,30 @@ for i in <tag:items:create_cities:signs/road>.elements {
     "road_sign_" + <tag:items:create_cities:signs/road>.elements.indexOf(i),
     i,
     <tag:items:forge:plates/zinc>
+  );
+}
+
+for i in <tag:items:create_cities:signs/road/large>.elements {
+  stoneCutter.addRecipe(
+    "large_road_sign_" + <tag:items:create_cities:signs/road/large>.elements.indexOf(i),
+    i as IItemStack * 8,
+    <tag:items:forge:storage_blocks/zinc>
+  );
+}
+
+for i in <tag:items:create_cities:signs/road>.elements {
+  stoneCutter.addRecipe(
+    "conv_road_sign_" + <tag:items:create_cities:signs/road>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:signs/road>
+  );
+}
+
+for i in <tag:items:create_cities:signs/road/large>.elements {
+  stoneCutter.addRecipe(
+    "conv_large_road_sign_" + <tag:items:create_cities:signs/road/large>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:signs/road/large>
   );
 }
 
@@ -1070,4 +1095,14 @@ craftingTable.addShaped(
   ]
 );
 
+
+// Obstacle Light
+craftingTable.addShaped(
+  "mjc_obstacle_light",
+  <item:modernjapancity:type_a_barricade> * 3,
+  [
+    [<item:minecraft:yellow_concrete>, <item:minecraft:redstone_lamp>],
+    [<item:minecraft:yellow_concrete>, <item:minecraft:redstone_lamp>]
+  ]
+);
 
