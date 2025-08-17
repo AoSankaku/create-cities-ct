@@ -638,3 +638,178 @@ stoneCutter.addRecipe(
 );
 
 
+// Tiles
+
+furnace.addRecipe(
+  "mjc_tile_block_1",
+  <item:modernjapancity:tile_block_1>, <item:minecraft:terracotta>, 1.0, 30
+);
+
+var mjc_base_tile = <item:modernjapancity:tile_block_1>;
+
+craftingTable.addShaped(
+  "mjc_tile_block_gray",
+  <item:modernjapancity:tile_block_2> * 8,
+  [
+    [mjc_base_tile, mjc_base_tile, mjc_base_tile],
+    [mjc_base_tile, <tag:items:forge:dyes/gray> ,mjc_base_tile],
+    [mjc_base_tile, mjc_base_tile, mjc_base_tile]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_tile_block_black",
+  <item:modernjapancity:tile_block_3> * 8,
+  [
+    [mjc_base_tile, mjc_base_tile, mjc_base_tile],
+    [mjc_base_tile, <tag:items:forge:dyes/black> ,mjc_base_tile],
+    [mjc_base_tile, mjc_base_tile, mjc_base_tile]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_tile_block_black_and_white",
+  <item:modernjapancity:tile_block_4> * 8,
+  [
+    [<item:modernjapancity:tile_block_1>, <item:modernjapancity:tile_block_1>, <item:modernjapancity:tile_block_1>],
+    [<item:modernjapancity:tile_block_1>, <item:minecraft:air>, <item:modernjapancity:tile_block_3>],
+    [<item:modernjapancity:tile_block_3>, <item:modernjapancity:tile_block_3>, <item:modernjapancity:tile_block_3>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_tile_block_white_and_yellow",
+  <item:modernjapancity:tile_block_5> * 8,
+  [
+    [<item:modernjapancity:tile_block_1>, <item:modernjapancity:tile_block_1>, <item:modernjapancity:tile_block_1>],
+    [<item:modernjapancity:tile_block_1>, <tag:items:forge:dyes/yellow> ,<item:modernjapancity:tile_block_1>],
+    [<item:modernjapancity:tile_block_1>, <item:modernjapancity:tile_block_1>, <item:modernjapancity:tile_block_1>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_tile_white",
+  <item:modernjapancity:tile_white> * 4,
+  [
+    [mjc_base_tile, mjc_base_tile],
+    [mjc_base_tile, mjc_base_tile]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_white_pixel_tile",
+  <item:modernjapancity:white_pixel_tile> * 9,
+  [
+    [mjc_base_tile, mjc_base_tile, mjc_base_tile],
+    [mjc_base_tile, mjc_base_tile, mjc_base_tile],
+    [mjc_base_tile, mjc_base_tile, mjc_base_tile]
+  ]
+);
+
+<tag:items:create_cities:tiles/white>.add(
+  mjc_base_tile,
+  <item:modernjapancity:tile_white>,
+  <item:modernjapancity:modern_tile_white>,
+  <item:modernjapancity:old_modern_tile_white>,
+  <item:modernjapancity:brick_tile_2>,
+  <item:modernjapancity:border_tile_white>,
+  <item:modernjapancity:white_pixel_tile>
+);
+
+for i in <tag:items:create_cities:tiles/white>.elements {
+  stoneCutter.addRecipe(
+    "mjc_white_tiles" + <tag:items:create_cities:tiles/white>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:tiles/white>
+  );
+}
+
+<tag:items:create_cities:tiles/yellow>.add(
+  <item:modernjapancity:tile_yellow>,
+  <item:modernjapancity:modern_tile_yellow>,
+  <item:modernjapancity:old_modern_tile_yellow>,
+  <item:modernjapancity:brick_tile_3>,
+  <item:modernjapancity:border_tile_yellow>,
+  <item:modernjapancity:yellow_pixel_tile>
+);
+
+for i in <tag:items:create_cities:tiles/yellow>.elements {
+  stoneCutter.addRecipe(
+    "mjc_yellow_tiles" + <tag:items:create_cities:tiles/yellow>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:tiles/yellow>
+  );
+}
+
+<tag:items:create_cities:tiles/orange>.add(
+  <item:modernjapancity:tile_orange>,
+  <item:modernjapancity:modern_tile_orange>,
+  <item:modernjapancity:old_modern_tile_orange>,
+  <item:modernjapancity:brick_tile_1>,
+  <item:modernjapancity:border_tile_orange>,
+  <item:modernjapancity:orange_pixel_tile>
+);
+
+for i in <tag:items:create_cities:tiles/orange>.elements {
+  stoneCutter.addRecipe(
+    "mjc_orange_tiles" + <tag:items:create_cities:tiles/orange>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:tiles/orange>
+  );
+}
+
+<tag:items:create_cities:tiles/gray>.add(
+  <item:modernjapancity:tile_block_2>,
+  <item:modernjapancity:tile_wall>
+);
+
+for i in <tag:items:create_cities:tiles/gray>.elements {
+  stoneCutter.addRecipe(
+    "mjc_gray_tiles" + <tag:items:create_cities:tiles/gray>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:tiles/gray>
+  );
+}
+
+<tag:items:create_cities:tiles/blue>.add(
+  <item:modernjapancity:border_tile_blue>,
+  <item:modernjapancity:blue_pixel_tile>
+);
+
+for i in <tag:items:create_cities:tiles/blue>.elements {
+  stoneCutter.addRecipe(
+    "mjc_blue_tiles" + <tag:items:create_cities:tiles/blue>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:tiles/blue>
+  );
+}
+
+craftingTable.addShaped(
+  "mjc_red_pixel_tile",
+  <item:modernjapancity:red_pixel_tile> * 8,
+  [
+    [<item:modernjapancity:white_pixel_tile>, <item:modernjapancity:white_pixel_tile>, <item:modernjapancity:white_pixel_tile>],
+    [<item:modernjapancity:white_pixel_tile>, <tag:items:forge:dyes/red> ,<item:modernjapancity:white_pixel_tile>],
+    [<item:modernjapancity:white_pixel_tile>, <item:modernjapancity:white_pixel_tile>, <item:modernjapancity:white_pixel_tile>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_blue_pixel_tile",
+  <item:modernjapancity:blue_pixel_tile> * 8,
+  [
+    [<item:modernjapancity:white_pixel_tile>, <item:modernjapancity:white_pixel_tile>, <item:modernjapancity:white_pixel_tile>],
+    [<item:modernjapancity:white_pixel_tile>, <tag:items:forge:dyes/blue> ,<item:modernjapancity:white_pixel_tile>],
+    [<item:modernjapancity:white_pixel_tile>, <item:modernjapancity:white_pixel_tile>, <item:modernjapancity:white_pixel_tile>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_blue_border_tile",
+  <item:modernjapancity:border_tile_blue> * 8,
+  [
+    [<item:modernjapancity:border_tile_white>, <item:modernjapancity:border_tile_white>, <item:modernjapancity:border_tile_white>],
+    [<item:modernjapancity:border_tile_white>, <tag:items:forge:dyes/blue> ,<item:modernjapancity:border_tile_white>],
+    [<item:modernjapancity:border_tile_white>, <item:modernjapancity:border_tile_white>, <item:modernjapancity:border_tile_white>]
+  ]
+);
