@@ -123,7 +123,8 @@ for i in <tag:items:create_cities:poles/white>.elements {
   <item:modernjapancity:vehicle_signals_arm>,
   <item:modernjapancity:pedestrian_signal_arm>,
   <item:modernjapancity:old_pedestrian_signal_arm>,
-  <item:modernjapancity:signal_speaker>
+  <item:modernjapancity:signal_speaker>,
+  <item:modernjapancity:bollard>
 );
 
 craftingTable.addShaped("utility_pole", <item:modernjapancity:utility_pole> * 8, [
@@ -1243,6 +1244,72 @@ craftingTable.addShapeless(
 );
 
 
+// Smart Light
+
+craftingTable.addShaped(
+  "mjc_smart_light",
+  <item:modernjapancity:smart_light> * 2,
+  [
+    [<item:minecraft:iron_ingot>],
+    [<item:minecraft:lantern>],
+    [<item:minecraft:iron_ingot>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_smart_light_brace",
+  <item:modernjapancity:smart_light_brace> * 24,
+  [
+    [<item:minecraft:iron_block>],
+    [<item:minecraft:iron_block>],
+    [<item:minecraft:iron_block>]
+  ]
+);
+
+
+craftingTable.addShaped(
+  "mjc_rubber_pole",
+  <item:modernjapancity:rubber_pole> * 16,
+  [
+    [<item:modernjapancity:pylon>],
+    [<item:modernjapancity:pylon>]
+  ]
+);
+
+
+// Security Camera
+
+craftingTable.addShaped(
+  "mjc_camera",
+  <item:modernjapancity:public_security_camera> * 6,
+  [
+    [<item:mekanism:basic_control_circuit>],
+    [<item:minecraft:redstone_block>],
+    [<tag:items:forge:glass/colorless>]
+  ]
+);
+
+
+// Register
+
+craftingTable.addShapeless(
+  "mjc_register",
+  <item:modernjapancity:register>,
+  [
+    <item:securitycraft:keypad_frame>, <item:mekanism:basic_control_circuit>
+  ]
+);
+
+
+// Doorbell
+
+craftingTable.addShapeless(
+  "mjc_doorbell",
+  <item:modernjapancity:doorbell> * 4,
+  [
+    <item:supplementaries:speaker_block>, <tag:items:minecraft:buttons>
+  ]
+);
 
 
 
