@@ -941,6 +941,15 @@ for i in <tag:items:create_cities:barriers/large>.elements {
 }
 
 
+craftingTable.addShapeless(
+  "mjc_display_construction",
+  <item:modernjapancity:electric_display_board_for_construction>,
+  [
+    <tag:items:create_cities:barriers/large>, <item:minecraft:gray_concrete>, <item:minecraft:iron_nugget>, <item:minecraft:iron_nugget>
+  ]
+);
+
+
 craftingTable.addShaped(
   "mjc_mesh_gate",
   <item:modernjapancity:mesh_gate> * 4,
@@ -964,7 +973,7 @@ craftingTable.addShaped(
 
 craftingTable.addShaped(
   "mjc_glass_fence",
-  <item:modernjapancity:wire_fence> * 6,
+  <item:modernjapancity:glass_fence> * 6,
   [
     [<item:minecraft:iron_ingot>, <tag:items:forge:glass_panes>, <item:minecraft:iron_ingot>],
     [<item:minecraft:iron_ingot>, <tag:items:forge:glass_panes>, <item:minecraft:iron_ingot>],
@@ -1099,6 +1108,7 @@ craftingTable.addShaped(
 
 
 // Obstacle Light
+
 craftingTable.addShaped(
   "mjc_obstacle_light",
   <item:modernjapancity:type_a_barricade> * 3,
@@ -1107,4 +1117,133 @@ craftingTable.addShaped(
     [<item:minecraft:yellow_concrete>, <item:minecraft:redstone_lamp>]
   ]
 );
+
+
+// Office Desk and Chair
+
+craftingTable.addShaped(
+  "mjc_office_desk",
+  <item:modernjapancity:office_desk> * 2,
+  [
+    [<item:minecraft:iron_block>, <item:minecraft:iron_block>, <item:minecraft:iron_block>],
+    [<item:minecraft:iron_ingot>, <item:minecraft:iron_nugget>, <item:minecraft:iron_ingot>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_office_chair",
+  <item:modernjapancity:office_chair>,
+  [
+    [<item:modernjapancity:station_bench>, <item:minecraft:air>],
+    [<item:minecraft:iron_nugget>, <item:minecraft:iron_nugget>]
+  ]
+);
+
+
+// Entrance Exit LED
+// TODO: Right click with brush converts the display
+
+craftingTable.addShaped(
+  "mjc_exit_led",
+  <item:modernjapancity:entrance_exit_led_display_arrow> * 2,
+  [
+    [<tag:items:create_cities:glowstone_dusts>],
+    [<item:minecraft:iron_ingot>],
+    [<item:minecraft:iron_ingot>]
+  ]
+);
+
+craftingTable.addShapeless(
+  "conv_mjc_exit_led",
+  <item:modernjapancity:entrance_exit_led_display_noentry>,
+  [<item:modernjapancity:entrance_exit_led_display_arrow>]
+);
+
+craftingTable.addShapeless(
+  "rev_conv_mjc_exit_led",
+  <item:modernjapancity:entrance_exit_led_display_arrow>,
+  [<item:modernjapancity:entrance_exit_led_display_noentry>]
+);
+
+
+// Ceiling Boards
+
+stoneCutter.addRecipe(
+  "mjc_ceiling_boards",
+  <item:modernjapancity:ceiling_boards>,
+  <item:minecraft:iron_block>
+);
+
+stoneCutter.addRecipe(
+  "mjc_ceiling_boards_vertical",
+  <item:modernjapancity:slanted_ceiling_vertical>,
+  <item:minecraft:iron_block>
+);
+
+stoneCutter.addRecipe(
+  "mjc_ceiling_boards_horizontal",
+  <item:modernjapancity:slanted_ceiling_parallel>,
+  <item:minecraft:iron_block>
+);
+
+
+// Block Walls
+
+<tag:items:create_cities:block_walls>.add(
+  <item:modernjapancity:block_wall>,
+  <item:modernjapancity:block_wall_pattern>,
+  <item:modernjapancity:block_wall_top>,
+  <item:modernjapancity:block_wall_top_pattern>
+);
+
+for i in <tag:items:create_cities:block_walls>.elements {
+  stoneCutter.addRecipe(
+    "mjc_block_walls" + <tag:items:create_cities:block_walls>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:block_walls>
+  );
+  stoneCutter.addRecipe(
+    "mjc_block_walls_from_smooth_stone_slab" + <tag:items:create_cities:block_walls>.elements.indexOf(i),
+    i,
+    <item:minecraft:smooth_stone_slab>
+  );
+}
+
+
+// Public and Emergency Telephone and their Stands
+
+craftingTable.addShapeless(
+  "mjc_public_telephone",
+  <item:modernjapancity:public_telephone>,
+  [<item:minecraft:iron_block>, <tag:items:forge:dyes/green>, <item:mekanismadditions:walkie_talkie>]
+);
+
+craftingTable.addShapeless(
+  "mjc_emergency_telephone",
+  <item:modernjapancity:emergency_phone>,
+  [<item:minecraft:iron_block>, <tag:items:forge:dyes/yellow>, <item:mekanismadditions:walkie_talkie>]
+);
+
+craftingTable.addShaped(
+  "mjc_telephone_booth",
+  <item:modernjapancity:public_telephone_booth>,
+  [
+    [<tag:items:forge:plates/iron>, <tag:items:forge:plates/iron>, <tag:items:forge:plates/iron>],
+    [<item:minecraft:air>, <tag:items:forge:ingots/iron>, <item:minecraft:air>],
+    [<item:minecraft:iron_ingot>, <tag:items:forge:ingots/iron>, <item:minecraft:iron_ingot>]
+  ]
+);
+
+craftingTable.addShapeless(
+  "mjc_telephone_cabinet",
+  <item:modernjapancity:public_telephone_cabinet>,
+  [
+    <item:modernjapancity:public_telephone_booth>, <item:securitycraft:keypad_frame>
+  ]
+);
+
+
+
+
+
 
