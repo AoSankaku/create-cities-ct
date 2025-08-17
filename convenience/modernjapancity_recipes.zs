@@ -973,3 +973,101 @@ for i in <tag:items:create_cities:braille_blocks/2>.elements {
     <item:modernjapancity:braille_block_caution_4>
   );
 }
+
+
+// Arrow Guidance Signs
+
+stoneCutter.addRecipe(
+  "mjc_arrow_guide_white",
+  <item:modernjapancity:arrow_block_white>,
+  <tag:items:forge:plates/iron>
+);
+stoneCutter.addRecipe(
+  "mjc_arrow_guide_black",
+  <item:modernjapancity:arrow_block_black>,
+  <tag:items:forge:plates/iron>
+);
+
+
+// Trash Cans
+
+stoneCutter.addRecipe(
+  "mjc_trash_can",
+  <item:modernjapancity:trash_can_1>,
+  <item:mtr:rubbish_bin_1>
+);
+
+
+// Vending Machines
+
+craftingTable.addShapeless(
+  "mjc_vending_machine_white",
+  <item:modernjapancity:vending_machine_white>,
+  [<item:minecraft:iron_block>, <item:mekanism:basic_control_circuit>, <tag:items:create_cities:glowstone_dusts>]
+);
+craftingTable.addShapeless(
+  "mjc_vending_machine_red",
+  <item:modernjapancity:vending_machine_red>,
+  [<item:modernjapancity:vending_machine_white>, <tag:items:forge:dyes/red>]
+);
+craftingTable.addShapeless(
+  "mjc_vending_machine_blue",
+  <item:modernjapancity:vending_machine_blue>,
+  [<item:modernjapancity:vending_machine_white>, <tag:items:forge:dyes/blue>]
+);
+craftingTable.addShapeless(
+  "mjc_vending_machine_yellow",
+  <item:modernjapancity:vending_machine_yellow>,
+  [<item:modernjapancity:vending_machine_white>, <tag:items:forge:dyes/yellow>]
+);
+
+
+// Wall Lights
+
+craftingTable.addShaped(
+  "mjc_wall_lights",
+  <item:modernjapancity:wall_light_square> * 2,
+  [
+    [<item:minecraft:iron_ingot>, <item:neoncraft:neon_tube>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_cylindrical_wall_light",
+  <item:modernjapancity:cylindrical_wall_light> * 2,
+  [
+    [<item:minecraft:iron_ingot>, <item:neoncraft:neon_tube>],
+    [<item:minecraft:iron_ingot>, <item:neoncraft:neon_tube>]
+  ]
+);
+
+
+// Pylon and Corn Bar and A Barricade
+
+craftingTable.addShaped(
+  "mjc_pylon",
+  <item:modernjapancity:pylon> * 8,
+  [
+    [<item:minecraft:air>, <item:minecraft:red_concrete>, <item:minecraft:air>],
+    [<item:minecraft:red_concrete>, <item:minecraft:white_concrete>, <item:minecraft:red_concrete>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_corn_bar",
+  <item:modernjapancity:corn_bar> * 8,
+  [
+    [<item:minecraft:black_concrete>, <item:minecraft:yellow_concrete>, <item:minecraft:black_concrete>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_a_barricade",
+  <item:modernjapancity:type_a_barricade> * 4,
+  [
+    [<item:minecraft:orange_concrete>, <item:minecraft:orange_concrete>, <item:minecraft:orange_concrete>],
+    [<item:minecraft:orange_concrete>, <item:minecraft:air>, <item:minecraft:orange_concrete>]
+  ]
+);
+
+
