@@ -813,3 +813,91 @@ craftingTable.addShaped(
     [<item:modernjapancity:border_tile_white>, <item:modernjapancity:border_tile_white>, <item:modernjapancity:border_tile_white>]
   ]
 );
+
+
+// Beams, Guardrails, and Guard Pipes
+
+craftingTable.addShaped(
+  "mjc_basic_guardrails",
+  <item:modernjapancity:guardrail_middle_pole> * 6,
+  [
+    [<item:minecraft:iron_ingot>, <item:minecraft:iron_bars> ,<item:minecraft:iron_ingot>],
+    [<item:minecraft:iron_ingot>, <item:minecraft:iron_bars>, <item:minecraft:iron_ingot>]
+  ]
+);
+
+<tag:items:create_cities:barriers/small>.add(
+  <item:modernjapancity:guardrail_end_left>,
+  <item:modernjapancity:guardrail_middle_pole>,
+  <item:modernjapancity:guardrail_middle>,
+  <item:modernjapancity:guardrail_end_right>,
+  <item:modernjapancity:box_beam>,
+  <item:modernjapancity:stainless_steel_car_stop>,
+  <item:modernjapancity:guard_pipe_end>,
+  <item:modernjapancity:guard_pipe_middle>
+);
+
+for i in <tag:items:create_cities:barriers/small>.elements {
+  stoneCutter.addRecipe(
+    "mjc_small_barriers" + <tag:items:create_cities:barriers/small>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:barriers/small>
+  );
+}
+
+
+craftingTable.addShaped(
+  "mjc_large_guardrails",
+  <item:modernjapancity:wire_fence> * 4,
+  [
+    [<item:minecraft:iron_ingot>, <item:minecraft:iron_bars> ,<item:minecraft:iron_ingot>],
+    [<item:minecraft:iron_ingot>, <item:minecraft:iron_bars> ,<item:minecraft:iron_ingot>],
+    [<item:minecraft:iron_ingot>, <item:minecraft:iron_bars>, <item:minecraft:iron_ingot>]
+  ]
+);
+
+<tag:items:create_cities:barriers/large>.add(
+  <item:modernjapancity:guard_fence_orange>,
+  <item:modernjapancity:guard_fence_green>,
+  <item:modernjapancity:wire_fence>
+);
+
+for i in <tag:items:create_cities:barriers/large>.elements {
+  stoneCutter.addRecipe(
+    "mjc_large_barriers" + <tag:items:create_cities:barriers/large>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:barriers/large>
+  );
+}
+
+
+craftingTable.addShaped(
+  "mjc_mesh_gate",
+  <item:modernjapancity:mesh_gate> * 4,
+  [
+    [<item:minecraft:iron_bars>, <item:minecraft:air> ,<item:minecraft:iron_bars>],
+    [<item:minecraft:air>, <item:minecraft:iron_bars> ,<item:minecraft:air>],
+    [<item:minecraft:iron_bars>, <item:minecraft:air>, <item:minecraft:iron_bars>]
+  ]
+);
+
+
+craftingTable.addShaped(
+  "mjc_steel_fence",
+  <item:modernjapancity:stainless_steel_fence> * 6,
+  [
+    [<item:minecraft:iron_ingot>, <item:minecraft:iron_ingot>, <item:minecraft:iron_ingot>],
+    [<item:minecraft:iron_ingot>, <item:minecraft:iron_bars>, <item:minecraft:iron_ingot>],
+    [<item:minecraft:iron_ingot>, <item:minecraft:iron_bars>, <item:minecraft:iron_ingot>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_glass_fence",
+  <item:modernjapancity:wire_fence> * 6,
+  [
+    [<item:minecraft:iron_ingot>, <tag:items:forge:glass_panes>, <item:minecraft:iron_ingot>],
+    [<item:minecraft:iron_ingot>, <tag:items:forge:glass_panes>, <item:minecraft:iron_ingot>],
+    [<item:minecraft:iron_ingot>, <tag:items:forge:glass_panes>, <item:minecraft:iron_ingot>]
+  ]
+);
