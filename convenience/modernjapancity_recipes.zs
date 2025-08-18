@@ -1079,6 +1079,39 @@ craftingTable.addShaped(
 );
 
 
+// Street Light
+
+craftingTable.addShaped(
+  "mjc_street_light",
+  <item:modernjapancity:street_light>,
+  [
+    [<item:minecraft:iron_ingot>, <item:neoncraft:neon_tube>],
+    [<item:minecraft:iron_ingot>, <item:minecraft:air>]
+  ]
+);
+
+craftingTable.addShaped(
+  "mjc_twin_headed_street_light",
+  <item:modernjapancity:twin_headed_street_light>,
+  [
+    [<item:neoncraft:neon_tube>, <item:minecraft:iron_ingot>, <item:neoncraft:neon_tube>],
+    [<item:minecraft:air>, <item:minecraft:iron_ingot>, <item:minecraft:air>]
+  ]
+);
+
+
+// Fluorescent Light
+
+craftingTable.addShaped(
+  "mjc_fluorescent_light",
+  <item:modernjapancity:fluorescent_light_1> * 32,
+  [
+    [<item:minecraft:iron_ingot>, <item:minecraft:iron_ingot>, <item:minecraft:iron_ingot>],
+    [<item:neoncraft:neon_tube>, <item:neoncraft:neon_tube>, <item:neoncraft:neon_tube>]
+  ]
+);
+
+
 // Pylon and Corn Bar and A Barricade
 
 craftingTable.addShaped(
@@ -1460,3 +1493,80 @@ craftingTable.addShapeless(
   <item:modernjapancity:outdoor_unit>,
   [<item:modernjapancity:wall_mounted_outdoor_unit>]
 );
+
+craftingTable.addShapeless(
+  "mjc_commercial_outdoor_units",
+  <item:modernjapancity:commercial_outdoor_units>,
+  [<item:minecraft:iron_block>, <item:create:propeller>, <item:modernjapancity:outdoor_unit>]
+);
+
+craftingTable.addShapeless(
+  "mjc_commercial_outdoor_units2",
+  <item:modernjapancity:commercial_outdoor_units>,
+  [<item:minecraft:iron_block>, <item:create:propeller>, <item:modernjapancity:wall_mounted_outdoor_unit>]
+);
+
+
+// Rectangular Vent
+
+craftingTable.addShaped(
+  "mjc_rectangular_vent",
+  <item:modernjapancity:rectangular_vent_cover> * 2,
+  [
+    [<tag:items:forge:plates/zinc>, <tag:items:forge:plates/zinc>],
+    [<item:minecraft:air>, <tag:items:forge:plates/zinc>]
+  ]
+);
+
+
+// Bold Pillars
+
+<tag:items:create_cities:pillars>.add(
+  <item:modernjapancity:stainless_pillars>,
+  <item:modernjapancity:marberon_pillar>,
+  <item:modernjapancity:marberon_color_pillar>,
+  <item:modernjapancity:aluminum_spandrel_pillars>
+);
+
+craftingTable.addShaped(
+  "mjc_stainless_pillars",
+  <item:modernjapancity:stainless_pillars> * 32,
+  [
+    [<tag:items:forge:storage_blocks/steel>, <item:minecraft:air>, <tag:items:forge:storage_blocks/steel>],
+    [<tag:items:forge:storage_blocks/steel>, <item:minecraft:air>, <tag:items:forge:storage_blocks/steel>],
+    [<tag:items:forge:storage_blocks/steel>, <item:minecraft:air>, <tag:items:forge:storage_blocks/steel>]
+  ]
+);
+
+for i in <tag:items:create_cities:pillars>.elements {
+  stoneCutter.addRecipe(
+    "mjc_pillars" + <tag:items:create_cities:pillars>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:pillars>
+  );
+}
+
+
+// Obstruction Lights
+
+craftingTable.addShapeless(
+  "mjc_obstruction_light",
+  <item:modernjapancity:obstruction_light> * 2,
+  [<item:minecraft:lantern>, <item:minecraft:daylight_detector>]
+);
+
+craftingTable.addShapeless(
+  "mjc_conv_obstruction_light_flash_off",
+  <item:modernjapancity:obstruction_light_flash_off>,
+  [<item:modernjapancity:obstruction_light>]
+);
+
+craftingTable.addShapeless(
+  "mjc_rev_obstruction_light",
+  <item:modernjapancity:obstruction_light>,
+  [<item:modernjapancity:obstruction_light_flash_off>]
+);
+
+
+
+
