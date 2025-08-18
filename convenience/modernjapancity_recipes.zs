@@ -523,6 +523,12 @@ for i in <tag:items:create_cities:signs/exit>.elements {
   );
 }
 
+craftingTable.addShapeless(
+  "mjc_tunnel_emergency_exit",
+  <item:modernjapancity:tunnel_emergency_exit_guide_light>,
+  [<tag:items:create_cities:signs/exit>, <tag:items:create_cities:signs/exit>]
+);
+
 
 // Old concrete and asphalt
 
@@ -1566,6 +1572,85 @@ craftingTable.addShapeless(
   <item:modernjapancity:obstruction_light>,
   [<item:modernjapancity:obstruction_light_flash_off>]
 );
+
+
+// Balustrades
+
+<tag:items:create_cities:balustrades>.add(
+  <item:modernjapancity:balustrade_1>,
+  <item:modernjapancity:balustrade_2>,
+  <item:modernjapancity:balustrade_3>,
+  <item:modernjapancity:balustrade_4>
+);
+
+craftingTable.addShaped(
+  "mjc_balustrade",
+  <item:modernjapancity:balustrade_1> * 16,
+  [
+    [<tag:items:minecraft:fences>, <tag:items:minecraft:fences>],
+    [<tag:items:minecraft:fences>, <tag:items:minecraft:fences>],
+    [<tag:items:forge:storage_blocks/iron>, <tag:items:forge:storage_blocks/iron>]
+  ]
+);
+
+for i in <tag:items:create_cities:balustrades>.elements {
+  stoneCutter.addRecipe(
+    "mjc_balustrades" + <tag:items:create_cities:balustrades>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:balustrades>
+  );
+}
+
+
+// Metal Block
+
+<tag:items:create_cities:metals>.add(
+  <item:minecraft:iron_block>,
+  <item:modernjapancity:metal_block>,
+  <item:mtr:metal>
+);
+
+for i in <tag:items:create_cities:metals>.elements {
+  stoneCutter.addRecipe(
+    "mjc_conv_metal" + <tag:items:create_cities:metals>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:metals>
+  );
+}
+
+stoneCutter.addRecipe(
+  "mjc_metal_slope",
+  <item:modernjapancity:metal_curve_block> * 2,
+  <tag:items:create_cities:metals>
+);
+
+
+// Cushion 
+
+craftingTable.addShaped(
+  "mjc_cushion",
+  <item:modernjapancity:cushion_drum> * 8,
+  [
+    [<item:minecraft:yellow_concrete>, <item:minecraft:air>, <item:minecraft:yellow_concrete>],
+    [<item:minecraft:yellow_concrete>, <item:minecraft:air>, <item:minecraft:yellow_concrete>],
+    [<item:minecraft:yellow_concrete>, <item:minecraft:air>, <item:minecraft:yellow_concrete>]
+  ]
+);
+
+
+// Jet Fan
+
+craftingTable.addShaped(
+  "mjc_jet_fan",
+  <item:modernjapancity:jet_fan> * 4,
+  [
+    [<tag:items:forge:plates/iron>, <tag:items:forge:plates/iron>],
+    [<item:create:encased_fan>, <item:create:encased_fan>],
+    [<tag:items:forge:plates/iron>, <tag:items:forge:plates/iron>]
+  ]
+);
+
+
 
 
 
