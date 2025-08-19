@@ -309,7 +309,9 @@ bulkAddItemsToTag(<tag:items:create_cities:signs/road/large>, ["landmark_sign", 
 );
 
 <tag:items:create_cities:signs/road/large>.add(
-  <item:modernjapancity:bus_stop>
+  <item:modernjapancity:bus_stop>,
+  <item:modernjapancity:coin_operated_parking_sign>,
+  <item:modernjapancity:outdoor_facility_information_sign>
 );
 
 for i in <tag:items:create_cities:signs/road>.elements {
@@ -534,7 +536,7 @@ craftingTable.addShapeless(
 
 furnace.addRecipe(
   "mjc_old_concrete",
-  <item:modernjapancity:old_concrete>, <item:minecraft:gray_concrete>, 1.0, 30
+  <item:modernjapancity:old_concrete>, <item:minecraft:light_gray_concrete>, 1.0, 30
 );
 
 stoneCutter.addRecipe(
@@ -636,7 +638,7 @@ craftingTable.addShaped(
 
 craftingTable.addShaped(
   "mjc_bracelet_parts",
-  <item:modernjapancity:curbstone> * 2,
+  <item:modernjapancity:bracelet_parts> * 2,
   [
     [<tag:items:forge:ingots/iron>, <tag:items:forge:ingots/iron>],
     [<item:minecraft:iron_bars>, <item:minecraft:air>]
@@ -1151,7 +1153,7 @@ craftingTable.addShaped(
 
 craftingTable.addShaped(
   "mjc_obstacle_light",
-  <item:modernjapancity:type_a_barricade> * 3,
+  <item:modernjapancity:obstacle_light> * 3,
   [
     [<item:minecraft:yellow_concrete>, <item:minecraft:redstone_lamp>],
     [<item:minecraft:yellow_concrete>, <item:minecraft:redstone_lamp>]
@@ -1223,6 +1225,15 @@ stoneCutter.addRecipe(
 stoneCutter.addRecipe(
   "mjc_ceiling_boards_horizontal",
   <item:modernjapancity:slanted_ceiling_parallel>,
+  <item:minecraft:iron_block>
+);
+
+
+// Flat Panel
+
+stoneCutter.addRecipe(
+  "mjc_flat_panel",
+  <item:modernjapancity:flat_panel> * 16,
   <item:minecraft:iron_block>
 );
 
@@ -1536,7 +1547,7 @@ craftingTable.addShaped(
 
 craftingTable.addShaped(
   "mjc_stainless_pillars",
-  <item:modernjapancity:stainless_pillars> * 32,
+  <item:modernjapancity:stainless_pillars> * 48,
   [
     [<tag:items:forge:storage_blocks/steel>, <item:minecraft:air>, <tag:items:forge:storage_blocks/steel>],
     [<tag:items:forge:storage_blocks/steel>, <item:minecraft:air>, <tag:items:forge:storage_blocks/steel>],
