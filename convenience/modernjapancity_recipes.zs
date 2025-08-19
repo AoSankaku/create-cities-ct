@@ -1662,6 +1662,103 @@ craftingTable.addShaped(
 );
 
 
+// Highway Signs
+
+bulkAddItemsToTag(<tag:items:create_cities:signs/highway>, ["highway_sign", "highway_gate_sign"]);
+
+for i in <tag:items:create_cities:signs/highway>.elements {
+  stoneCutter.addRecipe(
+    "mjc_highway_sign_" + <tag:items:create_cities:signs/highway>.elements.indexOf(i),
+    i as IItemStack * 8,
+    <tag:items:forge:storage_blocks/andesite_alloy>
+  );
+}
+
+for i in <tag:items:create_cities:signs/highway>.elements {
+  stoneCutter.addRecipe(
+    "mjc_highway_sign_conv_" + <tag:items:create_cities:signs/highway>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:signs/highway>
+  );
+}
+
+
+// Price Indicator
+
+craftingTable.addShapeless(
+  "mjc_price_indicator",
+  <item:modernjapancity:price_indicator>,
+  [<item:minecraft:gray_concrete>, <item:create:electron_tube>, <item:create:electron_tube>]
+);
+
+
+// Road Information Board
+
+craftingTable.addShapeless(
+  "mjc_road_info_board",
+  <item:modernjapancity:electronic_road_information_board>,
+  [<item:minecraft:black_concrete>, <item:create:electron_tube>, <item:create:electron_tube>]
+);
+
+
+// ETC Bar
+
+craftingTable.addShapeless(
+  "mjc_etc_bar",
+  <item:modernjapancity:etc_bar>,
+  [<item:minecraft:white_concrete>, <item:modernjapancity:corn_bar>]
+);
+
+
+// ETC Antenna
+
+craftingTable.addShapeless(
+  "mjc_etc_antenna",
+  <item:modernjapancity:etc_antenna>,
+  [<item:create:transmitter>, <item:create:transmitter>, <tag:items:forge:plates/iron>]
+);
+
+
+// Field Arches
+
+bulkAddItemsToTag(<tag:items:create_cities:signs/arch>, ["field_arch_"]);
+
+craftingTable.addShaped(
+  "mjc_arch",
+  <item:modernjapancity:field_arch_no_parking> * 4,
+  [
+    [<item:modernjapancity:pylon>, <tag:items:minecraft:signs>, <item:modernjapancity:pylon>]
+  ]
+);
+
+for i in <tag:items:create_cities:signs/arch>.elements {
+  stoneCutter.addRecipe(
+    "mjc_arch_cov" + <tag:items:create_cities:signs/arch>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:signs/arch>
+  );
+}
+
+
+// Banners
+
+bulkAddItemsToTag(<tag:items:create_cities:signs/banner>, ["banner_"]);
+
+craftingTable.addShaped(
+  "mjc_banner",
+  <item:modernjapancity:banner_welcome> * 2,
+  [
+    [<item:minecraft:red_banner>, <tag:items:forge:sheets/iron>]
+  ]
+);
+
+for i in <tag:items:create_cities:signs/banner>.elements {
+  stoneCutter.addRecipe(
+    "mjc_banner_cov" + <tag:items:create_cities:signs/banner>.elements.indexOf(i),
+    i,
+    <tag:items:create_cities:signs/banner>
+  );
+}
 
 
 
