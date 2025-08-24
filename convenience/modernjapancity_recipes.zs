@@ -1748,7 +1748,7 @@ craftingTable.addShaped(
   "mjc_banner",
   <item:modernjapancity:banner_welcome> * 2,
   [
-    [<item:minecraft:red_banner>, <tag:items:forge:sheets/iron>]
+    [<item:minecraft:red_banner>, <tag:items:forge:plates/iron>]
   ]
 );
 
