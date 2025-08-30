@@ -256,3 +256,7 @@ craftingTable.addShaped("cw_destruction", <item:constructionwand:core_destructio
   [<item:minecraft:diamond>, <tag:items:forge:glass_panes>, <item:minecraft:air>]
 ]);
 
+// Silicon
+
+<tag:items:forge:silicon>.add(<item:projectred_core:silicon>);
+
