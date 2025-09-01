@@ -14,6 +14,12 @@ import crafttweaker.api.recipe.replacement.Replacer;
 ]);
 <tag:items:create_cities:redstone_blocks>.add(<item:minecraft:redstone_block>);
 
+// Silicon
+<tag:items:forge:silicon>.add(<item:projectred_core:silicon>);
+
+// Silicon
+<tag:items:forge:ingots/gold>.add(<item:mca:rose_gold_ingot>);
+
 // Add thermal:sulfur_dust to #forge:dyes:yellow
 <tag:items:forge:dyes/yellow>.add(<item:thermal:sulfur_dust>);
 
@@ -255,8 +261,3 @@ craftingTable.addShaped("cw_destruction", <item:constructionwand:core_destructio
   [<tag:items:forge:glass_panes>, <item:refinedstorage:destruction_core>, <tag:items:forge:glass_panes>],
   [<item:minecraft:diamond>, <tag:items:forge:glass_panes>, <item:minecraft:air>]
 ]);
-
-// Silicon
-
-<tag:items:forge:silicon>.add(<item:projectred_core:silicon>);
-
