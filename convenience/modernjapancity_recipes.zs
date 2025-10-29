@@ -766,6 +766,8 @@ craftingTable.addShaped(
   ]
 );
 
+// White Tiles
+
 craftingTable.addShaped(
   "mjc_tile_white",
   <item:modernjapancity:tile_white> * 4,
@@ -803,6 +805,8 @@ for i in <tag:items:create_cities:tiles/white>.elements {
   );
 }
 
+// Yellow tiles
+
 <tag:items:create_cities:tiles/yellow>.add(
   <item:modernjapancity:tile_yellow>,
   <item:modernjapancity:modern_tile_yellow>,
@@ -810,6 +814,16 @@ for i in <tag:items:create_cities:tiles/white>.elements {
   <item:modernjapancity:brick_tile_3>,
   <item:modernjapancity:border_tile_yellow>,
   <item:modernjapancity:yellow_pixel_tile>
+);
+
+craftingTable.addShaped(
+  "mjc_tile_yellow",
+  <item:modernjapancity:tile_yellow> * 8,
+  [
+    [<item:modernjapancity:tile_white>, <item:modernjapancity:tile_white>, <item:modernjapancity:tile_white>],
+    [<item:modernjapancity:tile_white>, <tag:items:forge:dyes/yellow> ,<item:modernjapancity:tile_white>],
+    [<item:modernjapancity:tile_white>, <item:modernjapancity:tile_white>, <item:modernjapancity:tile_white>]
+  ]
 );
 
 for i in <tag:items:create_cities:tiles/yellow>.elements {
@@ -820,6 +834,8 @@ for i in <tag:items:create_cities:tiles/yellow>.elements {
   );
 }
 
+// Orange Tiles
+
 <tag:items:create_cities:tiles/orange>.add(
   <item:modernjapancity:tile_orange>,
   <item:modernjapancity:modern_tile_orange>,
@@ -829,6 +845,16 @@ for i in <tag:items:create_cities:tiles/yellow>.elements {
   <item:modernjapancity:orange_pixel_tile>
 );
 
+craftingTable.addShaped(
+  "mjc_tile_orange",
+  <item:modernjapancity:tile_orange> * 8,
+  [
+    [<item:modernjapancity:tile_white>, <item:modernjapancity:tile_white>, <item:modernjapancity:tile_white>],
+    [<item:modernjapancity:tile_white>, <tag:items:forge:dyes/orange> ,<item:modernjapancity:tile_white>],
+    [<item:modernjapancity:tile_white>, <item:modernjapancity:tile_white>, <item:modernjapancity:tile_white>]
+  ]
+);
+
 for i in <tag:items:create_cities:tiles/orange>.elements {
   stoneCutter.addRecipe(
     "mjc_orange_tiles" + <tag:items:create_cities:tiles/orange>.elements.indexOf(i),
@@ -836,6 +862,8 @@ for i in <tag:items:create_cities:tiles/orange>.elements {
     <tag:items:create_cities:tiles/orange>
   );
 }
+
+// Gray Tiles
 
 <tag:items:create_cities:tiles/gray>.add(
   <item:modernjapancity:tile_block_2>,
@@ -849,6 +877,8 @@ for i in <tag:items:create_cities:tiles/gray>.elements {
     <tag:items:create_cities:tiles/gray>
   );
 }
+
+// Blue Tiles
 
 <tag:items:create_cities:tiles/blue>.add(
   <item:modernjapancity:border_tile_blue>,
