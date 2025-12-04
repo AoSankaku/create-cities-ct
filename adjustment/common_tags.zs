@@ -5,7 +5,7 @@
   <item:minecraft:prismarine_crystals>,
   <item:minecraft:glowstone_dust>
 ]);
-<tag:items:create_cities:glowstone_dusts>.add(<tag:items:projectred_core:illumars>);
+// <tag:items:create_cities:glowstone_dusts>.add(<tag:items:projectred_core:illumars>);
 
 // Glowstone ←→ Sea Lantern(タグ作成)
 <tag:items:create_cities:bright_blocks>.add([
@@ -15,7 +15,10 @@
 <tag:items:create_cities:bright_blocks>.add(<tag:items:chipped:glowstone>);
 <tag:items:create_cities:bright_blocks>.add(<tag:items:rechiseled:glowstone>);
 
+// Revoked
+/*
 var colors = ["red", "orange", "yellow", "lime", "green", "cyan", "light_blue", "blue", "purple", "pink", "magenta", "brown", "white", "light_gray", "gray", "black"];
 for i in colors {
   <tag:items:create_cities:bright_blocks>.add(<item:projectred_illumination:${i}_inverted_illumar_lamp>);
 }
+*/
